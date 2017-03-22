@@ -1,0 +1,53 @@
+extends includes/base
+block whichtheme
+  - var theme = 'corporate'
+block isfullwidth
+  - var colSize = 'col-md-12'
+block breadcrumb
+  // BREADCRUMB
+  include includes/breadcrumb
+block custom-style
+  script(src="//localhost:35729/livereload.js")
+  link(href="../node_modules/onoffcanvas/dist/onoffcanvas.css" rel='stylesheet' type='text/css')
+  link(href="/css/custom.css" rel='stylesheet' type='text/css')
+block main-content
+  include offcanvas-cart
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .page-header
+        span.remove-border-bottom
+          button.btn.btn-lg.btn-success.pull-right.hidden-md.hidden-lg(data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="false")
+            span.fa.fa-shopping-cart 
+            | &nbsp; Cart (3)
+        h1 Real Property details
+    .col-sm-12
+      include search
+      .row
+        .col-sm-12.col-md-8
+          include panels
+          .row
+            .col-sm-4
+              button.btn.btn-success.btn-block Proceed to Checkout
+              br.visible-xs-block
+            .col-sm-5
+              button.btn.btn-default.btn-block Add all charges due to cart
+        .col-md-4.visible-md-block.visible-lg-block
+          include cart
+block custom-js
+  script.
+    $('.search-item').click(function(){
+      $(this).remove();
+    });
+    $('.row.row-offcanvas').addClass('onoffcanvas-container');
+    var $onoffcanvas = $("#onoffcanvas");
+    //Close on body click
+    $('body').click(function(e) {
+      if (!$onoffcanvas.is(e.target) && $onoffcanvas.has(e.target).length === 0 && $onoffcanvas.hasClass('is-open')) {
+        $onoffcanvas.onoffcanvas('hide');  // esc
+      }
+    });
+    //Close on esc key
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27 && $onoffcanvas.hasClass('is-open')) $onoffcanvas.onoffcanvas('hide');  // esc
+    });
+  script(src="../node_modules/onoffcanvas/dist/onoffcanvas.js")

@@ -1,0 +1,37 @@
+{
+  "name": "kc-propery-tax",
+  "version": "0.1.0",
+  "authors": [
+    "King County Web Team <webteam@kingcounty.gov>"
+  ],
+  "main": "bower.json",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.7",
+    "fontawesome": "4.7.0",
+    "jquery": "1.11.3",
+    "yamm3": "~1.1.0",
+    "ScrollToFixed": "1.0.6",
+    "moment": "~2.10.3"
+  },
+  "exportsOverride": {
+    "fontawesome": {
+      "less": "less/*.less"
+    },
+    "bootstrap": {
+      "less": "less/*.less",
+      "less/mixins": "less/mixins/*.less",
+      "js": "dist/js/bootstrap.min.js"
+    },
+    "yamm3": {
+      "": "yamm/*.less"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.panel-group#parcelPanels(role="tablist" aria-multiselectable="true")
+  .panel.panel-accordion-primary-dark
+    .panel-heading(role="tab" id="parcelAccount12345678")
+      h4.panel-title
+        a(data-toggle="collapse" data-parent="#parcelPanels" href="#collapse12345678" class="collapsed" aria-expanded="false" aria-controls="collapseOnePrimary")
+          p Parcel(Account) #
+          .fa.fa-plus.pull-right
+          p 
+            strong 12345678
+          
+    #collapse12345678.panel-collapse.collapse(role="tabpanel" aria-lablledby="parcelAccount12345678")
+      .panel-body
+        .row
+          .col-sm-4
+            p
+              strong Tax payer info
+            p 
+              | ABC Inc.
+              br
+              | First St.
+              br
+              | Seattle, WA 91919
+          .col-sm-8
+            p A paper invoice will be sent to this address:
+            p
+              | ABC Inc.
+              br
+              | First St.
+              br
+              | Seattle, WA 91919
+            button.btn.btn-default#btn-print-statement Print statement
+            | &nbsp; &nbsp;
+            a(href="#") 
+              .fa.fa-question-circle
+              | Pay by mail
+        hr 
+        .row
+          .col-sm-12
+            ul#myTabs.nav.nav-tabs.responsive(role="tablist")
+              li.active(role="presentation")
+                a#payment-details-tab(href="#payment-details-panel" role="tab" data-toggle="tab" aria-controls="payment-details-panel" aria-expanded="false") Payment details
+              li(role="presentation")
+                a#tax-year-details-tab(href="#tax-year-details-panel" role="tab" data-toggle="tab" aria-controls="tax-year-details-panel" aria-expanded="false") Tax year details
+              li(role="presentation")
+                a#details-tab(href="#receipts-panel" role="tab" data-toggle="tab" aria-controls="receipts-panel" aria-expanded="false") Receipts
+              li(role="presentation")
+                a#details-tab(href="#distribution-panel" role="tab" data-toggle="tab" aria-controls="distribution-panel" aria-expanded="false") 2017 Tax/fee distribution
+            #myTabContent.tab-content.responsive
+              #payment-details-panel.tab-pane.active.in(role="tabpanel" aria-labelledby="payment-details-panel")
+                p 
+                  strong Total Amount Due: $000.00
+                p 2017 Tax amount will be available February 15, 2017.
+                p If applicable, prior year(s) taxes are delinquent.
+
+                p Choose the amounts to pay now:
+                ul.leaders
+                  li
+                    span Item 1
+                    span $2000 &nbsp;
+                      button.btn.btn-primary#btn-add-amount-due Add
+                        .fa.fa-shopping-cart
+                  li
+                    span Item 2 Disabled
+                    span $5000 &nbsp;
+                      button.btn.btn-primary.disabled#btn-cancel-paper-statement Add
+                        .fa.fa-shopping-cart
+                  li
+                    span Item 3
+                    span $5000 &nbsp;
+                      button.btn.btn-primary#btn-cancel-paper-statement Add
+                        .fa.fa-shopping-cart
+              #tax-year-details-panel.tab-pane(role="tabpanel" aria-labelledby="tax-year-details-panel")
+                p Aenean accumsan nunc ut mauris accumsan, ut iaculis dolor volutpat. Praesent eu est diam. Donec suscipit mi sit amet eros venenatis dictum. Morbi in tristique elit. 
+              #receipts-panel.tab-pane(role="tabpanel" aria-labelledby="receipts-panel")
+                p Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.
+              #distribution-panel.tab-pane(role="tabpanel" aria-labelledby="distribution-panel")
+                p  Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n
