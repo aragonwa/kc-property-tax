@@ -12,7 +12,8 @@
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm run clean-dist",
     "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/distServer.js"
+    "postbuild": "babel-node buildScripts/distServer.js",
+    "pug": "pug src/pug/index.pug --out dist"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.6",
