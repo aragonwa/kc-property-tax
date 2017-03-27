@@ -2,7 +2,7 @@ doctype html
 html.no-js(lang="en")
   include head
   body
-    script.
+    //- script.
       if (!Modernizr.mq('only all')) {
       var script = document.createElement('script');
       script.type = 'text/javascript';
@@ -26,5 +26,5 @@ html.no-js(lang="en")
     script(src="/js/main.js")
     // set the background image
     script.
-      $(window).on("resize", function(){chooseBG("/img/hero-driftwood-sm.jpg", "/img/hero-driftwood.jpg")}).resize();
+      $(window).on("resize", function(){chooseBG("/assets/img/hero-driftwood-sm.jpg", "/assets/img/hero-driftwood.jpg")}).resize();
     block custom-js
