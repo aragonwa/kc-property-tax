@@ -7,9 +7,8 @@ block breadcrumb
   // BREADCRUMB
   include includes/breadcrumb
 block custom-style
-  script(src="//localhost:35729/livereload.js")
-  link(href="/css/onoffcanvas.css" rel='stylesheet' type='text/css')
-  link(href="/css/custom.css" rel='stylesheet' type='text/css')
+  //- script(src="//localhost:35729/livereload.js")
+  link(href="/styles/css/custom.css" rel='stylesheet' type='text/css')
 block main-content
   include offcanvas-cart
   .row.addon-row.addon-row-attached
@@ -19,7 +18,7 @@ block main-content
           button.btn.btn-lg.btn-success.pull-right.hidden-md.hidden-lg(data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="false")
             span.fa.fa-shopping-cart
             | &nbsp; Cart (3)
-        h1 Real Property details
+        h1 Real Property detailss
     .col-sm-12
       include search
       .row
@@ -34,5 +33,5 @@ block main-content
         .col-md-4.visible-md-block.visible-lg-block
           include cart
 block custom-js
-  script(src="/js/onoffcanvas.js")
-  script(src="/js/custom.js")
+  script(src="/onoffcanvas.js")
+  script(src="/custom.js")
