@@ -40,6 +40,10 @@ export default {
         test: /\.(jpg|png|svg|gif)$/i,
         use: [ "file-loader" ]
       },
+      {
+        test: /\.exec\.js$/,
+        use: [ 'script-loader' ]
+      }
     ]
   }
 }
