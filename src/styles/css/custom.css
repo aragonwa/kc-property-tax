@@ -177,11 +177,6 @@ button.onoffcanvas-toggler {
 .panel.panel-accordion-primary-dark h4.panel-title .collapsed .fa-plus:before {
   content: "\f067";
 }
-.panel.panel-accordion-primary-dark .panel-body {
-  border-right: 2px solid #DDD;
-  border-left: 2px solid #DDD;
-  border-bottom: 2px solid #DDD;
-}
 .panel.panel-accordion-primary-dark .fw-previous-tab-pane,
 .panel.panel-accordion-primary-dark .tab-pane {
   border-bottom: none;

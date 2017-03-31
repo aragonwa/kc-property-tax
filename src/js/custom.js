@@ -4,6 +4,7 @@ $('.search-item').click(function(){
 });
 
 $('.row.row-offcanvas').addClass('onoffcanvas-container');
+
 const $onoffcanvas = $("#onoffcanvas");
 //Close panel on body click
 $('body').click(function(e) {

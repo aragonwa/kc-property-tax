@@ -17,6 +17,10 @@ app.get('/', (req, res) => {
   res.render(path.join(__dirname, '../src/pug/index'));
 });
 
+app.get('/review', (req, res) => {
+  res.render(path.join(__dirname, '../src/pug/review'));
+});
+
 app.listen(port, err => {
   browserSync({
     proxy: 'localhost:' + port,
