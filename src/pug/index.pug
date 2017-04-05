@@ -7,9 +7,10 @@ block breadcrumb
   // BREADCRUMB
   include includes/breadcrumb
 block custom-style
-  script(src="//localhost:35729/livereload.js")
-  link(href="/css/onoffcanvas.css" rel='stylesheet' type='text/css')
-  link(href="/css/custom.css" rel='stylesheet' type='text/css')
+  if production
+    link(href="/css/custom.css" rel='stylesheet' type='text/css')
+  else
+    link(href="/styles/css/custom.css" rel='stylesheet' type='text/css')
 block main-content
   include offcanvas-cart
   .row.addon-row.addon-row-attached
@@ -34,5 +35,7 @@ block main-content
         .col-md-4.visible-md-block.visible-lg-block
           include cart
 block custom-js
-  script(src="/js/onoffcanvas.js")
-  script(src="/js/custom.js")
+  if production
+    script(src="/js/custom.js")
+  else
+    script(src="/js/custom.compiled.js")
