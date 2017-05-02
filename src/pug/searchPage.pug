@@ -1,0 +1,79 @@
+extends includes/base
+block whichtheme
+  - var theme = 'corporate'
+block isfullwidth
+  - var colSize = 'col-md-12'
+block breadcrumb
+  // BREADCRUMB
+  include includes/breadcrumb
+block custom-style
+  if production
+    link(href="/css/custom.css" rel='stylesheet' type='text/css')
+  else
+    link(href="/styles/css/custom.css" rel='stylesheet' type='text/css')
+block main-content
+  include offcanvas-cart
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .page-header
+        h1 Property Tax Payment Search
+        // https://kc1.sharepoint.com/sites/Help/webpublishing/wcms/epayments/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FHelp%2Fwebpublishing%2Fwcms%2Fepayments%2FShared%20Documents%2Fprototype%2Fproperty-tax%2Fimages%2Fscreenshots%2Fprop-Tablet-receipt%2Epng&parent=%2Fsites%2FHelp%2Fwebpublishing%2Fwcms%2Fepayments%2FShared%20Documents%2Fprototype%2Fproperty-tax%2Fimages%2Fscreenshots
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .panel.panel-success
+        .panel-body(style="background-color:#e1e9c1")
+          | Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .row
+        .col-sm-6
+          .panel.panel-primary
+            .panel-heading
+              | Real Property tax
+              .fa.fa-question-circle.pull-right
+            img(style="width:100%" src="../assets/img/stock-personal-property.jpg")
+            .panel-body(style="background-color:#e1e9c1")
+              form
+                .form-group
+                  .fa.fa-question-circle.pull-right
+                  label(for="") Parcel #/tax account #
+                  input.form-control(type="text" id="")
+                  p.help-block Seperate multiple entries with a comma
+                button.btn.btn-primary(type="submit")
+                    | Search
+                    | &nbsp;
+                    span.fa.fa-search
+        .col-sm-6
+          .panel.panel-primary
+            .panel-heading
+              | Personal Property tax
+              .fa.fa-question-circle.pull-right
+            img(style="width:100%" src="../assets/img/stock-personal-property.jpg")
+            .panel-body(style="background-color:#e1e9c1")
+              form
+                .form-group
+                  .fa.fa-question-circle.pull-right
+                  label(for="") Personal property tax account #
+                  .input-group
+                    span.input-group-addon 4200-
+                    input.form-control(type="text" id="")
+                  p.help-block Seperate multiple entries with a comma
+                button.btn.btn-primary(type="submit")
+                  | Search
+                  | &nbsp;
+                  span.fa.fa-search
+        .col-sm-6
+          .well.text-center
+            a(href="")
+              | Frequently asked questions&nbsp;
+              .fa.fa-question-circle
+        .col-sm-6
+          .well.text-center
+            a(href="")
+              | Contact us&nbsp;
+              .fa.fa-envelope-o
+block custom-js
+  if production
+    script(src="/js/custom.js")
+  else
+    script(src="/js/custom.compiled.js")

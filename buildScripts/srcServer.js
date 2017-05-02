@@ -14,11 +14,15 @@ app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '../src')));
 
 app.get('/', (req, res) => {
-  res.render(path.join(__dirname, '../src/pug/index'));
+  res.render(path.join(__dirname, '../src/pug/indexPage'));
 });
 
 app.get('/review', (req, res) => {
-  res.render(path.join(__dirname, '../src/pug/review'));
+  res.render(path.join(__dirname, '../src/pug/reviewPage'));
+});
+
+app.get('/search', (req, res) => {
+  res.render(path.join(__dirname, '../src/pug/searchPage'));
 });
 
 app.listen(port, err => {
