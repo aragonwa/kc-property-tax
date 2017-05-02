@@ -1,0 +1,84 @@
+extends includes/base
+block whichtheme
+  - var theme = 'corporate'
+block isfullwidth
+  - var colSize = 'col-md-12'
+block breadcrumb
+  // BREADCRUMB
+  include includes/breadcrumb
+block custom-style
+  if production
+    link(href="/css/custom.css" rel='stylesheet' type='text/css')
+  else
+    link(href="/styles/css/custom.css" rel='stylesheet' type='text/css')
+block main-content
+  include offcanvas-cart
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .page-header
+        h1 Tax Payment Receipt
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      p
+        strong Thank you for your tax payment to King County Treasury. Please print or save this receipt for your records. For questions about your bill, please contact:
+      p
+        | King County Treasury
+        br
+        | 401 5th Ave, Suite 600
+        br
+        | Seattle, WA 98102
+        br
+        | (206) 666-6666
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      div(style="border-top: 1px dotted #000000; border-bottom: 1px dotted #000000")
+        h2 Itemization
+        ul.leaders(style="border-bottom:2px solid #A5C727;")
+            li
+              span 1234567
+              span $2000
+            li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+            li
+              span 8901234
+              span $2000
+            li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+        .row
+          .col-sm-6
+          .col-sm-6
+            .cart-totals
+              ul.leaders
+                li
+                  span Subtotal
+                  span $5432.45
+                li
+                  span Service charge
+                  span $0
+                li
+                  span Tax
+                  span $0
+                li
+                  span Delivery
+                  span $0
+                br
+                li
+                  span Total
+                  span $5432.45
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      p Billed to:
+      p
+        | ABC Company Inc.
+        br
+        | 123 1st Road
+        br
+        | Seattle, WA 98102
+    .col-sm-12
+      button.btn.btn-default Save as PDF
+      | &nbsp;
+      | &nbsp;
+      button.btn.btn-success Print
+block custom-js
+  if production
+    script(src="/js/custom.js")
+  else
+    script(src="/js/custom.compiled.js")
