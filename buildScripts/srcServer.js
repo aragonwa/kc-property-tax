@@ -13,13 +13,28 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '../src')));
 
-app.get('/', (req, res) => {
-  res.render(path.join(__dirname, '../src/pug/index'));
-});
+['index', 'review', 'search', 'receipt'].forEach(function(route) {
+  if(route === 'index') {
+    app.get('/', (req, res) => {
+      res.render(path.join(__dirname, '../src/pug/'+ route +'Page'));
+    });
+  } else {
+    app.get('/'+route, (req, res) => {
+      res.render(path.join(__dirname, '../src/pug/'+ route +'Page'));
+    });
+  }
+}, this);
+// app.get('/', (req, res) => {
+//   res.render(path.join(__dirname, '../src/pug/indexPage'));
+// });
 
-app.get('/review', (req, res) => {
-  res.render(path.join(__dirname, '../src/pug/review'));
-});
+// app.get('/review', (req, res) => {
+//   res.render(path.join(__dirname, '../src/pug/reviewPage'));
+// });
+
+// app.get('/search', (req, res) => {
+//   res.render(path.join(__dirname, '../src/pug/searchPage'));
+// });
 
 app.listen(port, err => {
   browserSync({
