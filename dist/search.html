@@ -603,37 +603,6 @@
               </div>
             </div>
             <!-- PAGE CONTENT BEGINS HERE-->
-            <div class="onoffcanvas is-right" id="onoffcanvas" aria-expanded="false">
-              <div id="offcanvas-cart">
-                <button class="close" type="button" data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="true">
-                  <div class="fa fa-close"></div>
-                </button><span class="clearfix"></span>
-                <div class="cart">
-                  <div class="cart-title"><span class="fa fa-shopping-cart"></span>&nbsp; MY CART</div>
-                  <div class="cart-items">
-                    <ul class="leaders">
-                      <li><span>1234567</span><span>$2000</span></li>
-                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                      <li><span>8901234</span><span>$2000</span></li>
-                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                      <li><span>8901234</span><span>$1562.45</span></li>
-                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                    </ul>
-                  </div>
-                  <div class="cart-totals">
-                    <ul class="leaders">
-                      <li><span>Subtotal</span><span>$5432.45</span></li>
-                      <li><span>Service charge</span><span>$0</span></li>
-                      <li><span>Tax</span><span>$0</span></li>
-                      <li><span>Delivery</span><span>$0</span></li><br>
-                      <li><span>Total</span><span>$5432.45</span></li>
-                    </ul>
-                  </div>
-                  <button class="btn btn-success btn-block">Proceed to Checkout</button><br>
-                  <button class="btn btn-default btn-block">Add all charges due to cart</button>
-                </div>
-              </div>
-            </div>
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
                 <div class="page-header">
@@ -643,8 +612,8 @@
             </div>
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
-                <div class="panel panel-success">
-                  <div class="panel-body" style="background-color:#e1e9c1;">Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.</div>
+                <div class="panel panel-success search-notice">
+                  <div class="panel-body">Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.</div>
                 </div>
               </div>
             </div>
@@ -652,18 +621,18 @@
               <div class="col-sm-12">
                 <div class="row">
                   <div class="col-sm-6">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-primary search-card">
                       <div class="panel-heading">Real Property tax<a href="#">
-                          <div class="fa fa-question-circle pull-right" style="color:#ffffff;"></div></a></div><img style="width:100%;" src="../assets/img/stock-personal-property.jpg">
-                      <div class="panel-body" style="background-color:#e1e9c1;">
+                          <div class="fa fa-question-circle pull-right"></div></a></div><img class="search-card-image" src="../assets/img/stock-personal-property.jpg">
+                      <div class="panel-body">
                         <form>
                           <div class="form-group"><a href="#">
                               <div class="fa fa-question-circle pull-right"></div></a>
-                            <label for="">Parcel #/tax account #</label>
-                            <input class="form-control" type="text" id="">
+                            <label for="search-real-property-input">Parcel #/tax account #</label>
+                            <input class="form-control" type="text" id="search-real-property-input">
                             <p class="help-block">Seperate multiple entries with a comma</p>
                           </div>
-                          <button class="btn btn-primary" type="submit">
+                          <button class="btn btn-primary" type="submit" id="search-real-property-submit">
                             Search
                             &nbsp;<span class="fa fa-search"></span>
                           </button>
@@ -672,20 +641,20 @@
                     </div>
                   </div>
                   <div class="col-sm-6">
-                    <div class="panel panel-primary">
+                    <div class="panel panel-primary search-card">
                       <div class="panel-heading">Personal Property tax<a href="#">
-                          <div class="fa fa-question-circle pull-right" style="color:#ffffff;"></div></a></div><img style="width:100%;" src="../assets/img/stock-personal-property.jpg">
-                      <div class="panel-body" style="background-color:#e1e9c1;">
+                          <div class="fa fa-question-circle pull-right"></div></a></div><img src="../assets/img/stock-personal-property.jpg">
+                      <div class="panel-body">
                         <form>
                           <div class="form-group"><a href="#">
                               <div class="fa fa-question-circle pull-right"></div></a>
-                            <label for="">Personal property tax account #</label>
+                            <label for="search-personal-property-input">Personal property tax account #</label>
                             <div class="input-group"><span class="input-group-addon">4200-</span>
-                              <input class="form-control" type="text" id="">
+                              <input class="form-control" type="text" id="search-personal-property-input">
                             </div>
                             <p class="help-block">Seperate multiple entries with a comma</p>
                           </div>
-                          <button class="btn btn-primary" type="submit">
+                          <button class="btn btn-primary" type="submit" id="search-personal-property-submit">
                             Search
                             &nbsp;<span class="fa fa-search"></span>
                           </button>

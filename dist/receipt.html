@@ -603,37 +603,6 @@
               </div>
             </div>
             <!-- PAGE CONTENT BEGINS HERE-->
-            <div class="onoffcanvas is-right" id="onoffcanvas" aria-expanded="false">
-              <div id="offcanvas-cart">
-                <button class="close" type="button" data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="true">
-                  <div class="fa fa-close"></div>
-                </button><span class="clearfix"></span>
-                <div class="cart">
-                  <div class="cart-title"><span class="fa fa-shopping-cart"></span>&nbsp; MY CART</div>
-                  <div class="cart-items">
-                    <ul class="leaders">
-                      <li><span>1234567</span><span>$2000</span></li>
-                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                      <li><span>8901234</span><span>$2000</span></li>
-                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                      <li><span>8901234</span><span>$1562.45</span></li>
-                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                    </ul>
-                  </div>
-                  <div class="cart-totals">
-                    <ul class="leaders">
-                      <li><span>Subtotal</span><span>$5432.45</span></li>
-                      <li><span>Service charge</span><span>$0</span></li>
-                      <li><span>Tax</span><span>$0</span></li>
-                      <li><span>Delivery</span><span>$0</span></li><br>
-                      <li><span>Total</span><span>$5432.45</span></li>
-                    </ul>
-                  </div>
-                  <button class="btn btn-success btn-block">Proceed to Checkout</button><br>
-                  <button class="btn btn-default btn-block">Add all charges due to cart</button>
-                </div>
-              </div>
-            </div>
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
                 <div class="page-header">
@@ -643,22 +612,22 @@
             </div>
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
-                <p><strong>Thank you for your tax payment to King County Treasury. Please print or save this receipt for your records. For questions about your bill, please contact:</strong></p>
-                <p>King County Treasury<br>401 5th Ave, Suite 600<br>Seattle, WA 98102<br>(206) 666-6666</p>
+                <div class="receipt-header">
+                  <p><strong>Thank you for your tax payment to King County Treasury. Please print or save this receipt for your records. For questions about your bill, please contact:</strong></p>
+                  <p>King County Treasury<br>401 5th Ave, Suite 600<br>Seattle, WA 98102<br>(206) 666-6666</p>
+                </div>
               </div>
               <div class="col-sm-12">
-                <div style="border-top: 1px dotted #000000; border-bottom: 1px dotted #000000;">
-                  <p style="padding-top:10px; padding-bottom:10px;"><strong>Itemization</strong></p>
-                  <ul class="leaders" style="border-bottom:2px solid #A5C727; padding-bottom:10px;">
+                <div class="receipt-cart">
+                  <p class="receipt-cart-header"><strong>Itemization</strong></p>
+                  <ul class="leaders">
                     <li><span>1234567</span><span>$2000</span></li>
                     <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
                     <li><span>8901234</span><span>$2000</span></li>
                     <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
                   </ul>
                   <div class="row">
-                    <div class="col-sm-6"></div>
-                    <!-- do the pull row thing here-->
-                    <div class="col-sm-6">
+                    <div class="col-sm-offset-6 col-sm-6">
                       <div class="cart-totals">
                         <ul class="leaders">
                           <li><span>Subtotal</span><span>$5432.45</span></li>
@@ -675,14 +644,14 @@
             </div>
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
-                <p style="font-weight:800;">Billed to:</p>
+                <p><strong>Billed to:</strong></p>
                 <p>ABC Company Inc.<br>123 1st Road<br>Seattle, WA 98102</p>
               </div>
               <div class="col-sm-12">
-                <button class="btn btn-default" id="save-as-pdf">Save as PDF</button>
+                <button class="btn btn-default" id="receipt-save-as-pdf">Save as PDF</button>
                 &nbsp;
                 &nbsp;
-                <button class="btn btn-success" id="print">Print</button>
+                <button class="btn btn-success" id="receipt-print">Print</button>
               </div>
             </div>
             <div class="row addon-row addon-row-transparent main-share-links">
