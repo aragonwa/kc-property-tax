@@ -21,9 +21,18 @@ app.locals.env = process.env;
 app.use(compression());
 app.use(express.static(path.join(__dirname,'../dist')));
 
-app.get('/', (req, res)=>{
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
-});
+let routes = ['index', 'review', 'search', 'receipt'];
+for(let route of routes) {
+  if(route === 'index') {
+    app.get('/', (req, res) => {
+      res.sendFile(path.join(__dirname, '../dist/'+ route +'.html'));
+    });
+  } else {
+    app.get('/'+route, (req, res) => {
+      res.sendFile(path.join(__dirname, '../dist/'+ route +'.html'));
+    });
+  }
+}
 
 app.listen(port, err => {
   (err)? console.log(err):open('http://localhost:'+port);

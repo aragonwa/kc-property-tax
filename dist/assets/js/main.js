@@ -65,7 +65,7 @@ $(function () {
       url: url
     }).done(function (data) {
       $this.append(data);
-      // for datedlist popovers          
+      // for datedlist popovers
       $('.popoveritem').popover();
     });
   });
@@ -422,8 +422,8 @@ $(function () {
         /* IE8 & 9 only Cross domain JSON GET request */
         if ('XDomainRequest' in window && window.XDomainRequest !== null) {
           var xdr = new XDomainRequest(); /* Use Microsoft XDR */
-          /* 
-          * XDomainRequest object requires a method for each event handler, 
+          /*
+          * XDomainRequest object requires a method for each event handler,
           * even if anonymous, and to set properties explicitly
           */
           xdr.onload = function () {
@@ -506,7 +506,7 @@ $(function () {
     //Set global scope for instance
     var $this = this,
         allpops = [];
-      
+
     function parseData(data) {
       $this.addClass('news-feed');
       $this.addClass('dated-news-feed');
@@ -744,7 +744,7 @@ var fakewaffle = ( function ( $, fakewaffle ) {
         fakewaffle.checkResize();
         fakewaffle.bindTabToCollapse();
 
-        
+
     };
 
     fakewaffle.checkResize = function () {
@@ -813,7 +813,7 @@ var fakewaffle = ( function ( $, fakewaffle ) {
 
         // Toggle the panels when the associated tab is toggled
         tabs.on( 'shown.bs.tab', function ( e ) {
-        
+
             var $current  = $( e.currentTarget.hash.replace( /#/, '#collapse-' ) );
             $current.collapse( 'show' );
 
@@ -958,7 +958,7 @@ $(function(){
    $('#sidebar .panel .list-group.collapse > .list-group.collapse').find('a.list-group-item').each(function () {
       $(this).css('padding-left', '+=10');
   });
-   
+
   $('#sidebar .panel a.list-group-item[data-toggle]').each(function () {
     $(this).addClass('collapsed');
   });
@@ -970,14 +970,14 @@ $(function(){
 (function($){
   'use strict';
   // bind a click event to the 'skip' link
-  $('a.skip-contents').click(function(){ // Need to add a class to skip to links 
+  $('a.skip-contents').click(function(){ // Need to add a class to skip to links
     // strip the leading hash and declare
     // the content we're skipping to
     var skipTo = '#'+this.href.split('#')[1];
-    // Setting 'tabindex' to -1 takes an element out of normal 
+    // Setting 'tabindex' to -1 takes an element out of normal
     // tab flow but allows it to be focused via javascript
     $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
-      // when focus leaves this element, 
+      // when focus leaves this element,
       // remove the tabindex attribute
       $(this).removeAttr('tabindex');
     }).focus(); // focus on the content container
@@ -1174,9 +1174,9 @@ var verticalPanels = function ($) {
                 if (!base.options.dontSetWidth){ cssOptions['width']=target.width(); };
 
                 target.css(cssOptions);
-                
+
                 target.addClass(base.options.baseClassName);
-                
+
                 if (base.options.className) {
                     target.addClass(base.options.className);
                 }

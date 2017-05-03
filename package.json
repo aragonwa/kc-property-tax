@@ -16,7 +16,7 @@
     "clean-dist": "rimraf ./dist && mkdir dist  && mkdirp dist/js",
     "copy:build": "copyfiles -u 1 src/assets/** dist/",
     "open:dist": "babel-node buildScripts/distServer",
-    "pug:build": "pug src/pug/index.pug -P --obj pugConfig.json -o dist/",
+    "pug:build": "pug src/pug/index.pug src/pug/search.pug src/pug/receipt.pug src/pug/review.pug -P --obj pugConfig.json -o dist/",
     "less:build": "lessc --clean-css src/styles/custom.less dist/css/custom.css",
     "js:build": "uglifyjs dist/js/custom.js -o dist/js/custom.js",
     "babel:build": "babel src/js --out-file dist/js/custom.js --ignore src/js/custom.compiled.js",

@@ -1,8 +1,6 @@
 import express from 'express';
 import path from 'path';
-// import open from 'open'
 import logger from 'morgan';
-// import livereload from 'livereload'
 import browserSync from 'browser-sync';
 
 const port = process.env.PORT || 3000;
@@ -13,28 +11,18 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, '../src')));
 
-['index', 'review', 'search', 'receipt'].forEach(function(route) {
+let routes = ['index', 'review', 'search', 'receipt'];
+for( let route of routes) {
   if(route === 'index') {
     app.get('/', (req, res) => {
-      res.render(path.join(__dirname, '../src/pug/'+ route +'Page'));
+      res.render(path.join(__dirname, '../src/pug/'+ route));
     });
   } else {
     app.get('/'+route, (req, res) => {
-      res.render(path.join(__dirname, '../src/pug/'+ route +'Page'));
+      res.render(path.join(__dirname, '../src/pug/'+ route));
     });
   }
-}, this);
-// app.get('/', (req, res) => {
-//   res.render(path.join(__dirname, '../src/pug/indexPage'));
-// });
-
-// app.get('/review', (req, res) => {
-//   res.render(path.join(__dirname, '../src/pug/reviewPage'));
-// });
-
-// app.get('/search', (req, res) => {
-//   res.render(path.join(__dirname, '../src/pug/searchPage'));
-// });
+}
 
 app.listen(port, err => {
   browserSync({
@@ -44,6 +32,3 @@ app.listen(port, err => {
   // (err) ? console.log(err) : open('http://localhost:' + port)
   (err) ? console.log(err) : '';
 });
-
-// const server = livereload.createServer({exts: 'pug'})
-// server.watch(__dirname + '../src')

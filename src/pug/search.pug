@@ -1,22 +1,81 @@
-.call-out-text.call-out-text-success
-  label(for="searchParcel") Search for another parcel
-  .input-group
-    input.form-control(type="text" id="searchParcel" name="searchParcel")
-    span.input-group-btn
-      button.btn.btn-primary
-        span.hidden-xs Update&nbsp;
-        .fa.fa-search(aria-hidden="true")
-        span.sr-only Search parcels
-  ul.list-inline(style="padding-top:5px; margin-bottom:0")
-    li.search-item#item123456789
-      .fa.fa-times.fa-color-danger
-      | &nbsp;item1
-    li.search-item#item123456789
-      .fa.fa-times.fa-color-danger
-      | &nbsp;item2
-    li.search-item#item123456789
-      .fa.fa-times.fa-color-danger
-      | &nbsp;item3
-    li.search-item#item123456789
-      .fa.fa-times.fa-color-danger
-      | &nbsp;item4
+extends includes/base
+block whichtheme
+  - var theme = 'corporate'
+block isfullwidth
+  - var colSize = 'col-md-12'
+block breadcrumb
+  // BREADCRUMB
+  include includes/breadcrumb
+block custom-style
+  if production
+    link(href="/css/custom.css" rel='stylesheet' type='text/css')
+  else
+    link(href="/styles/css/custom.css" rel='stylesheet' type='text/css')
+block main-content
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .page-header
+        h1 Property Tax Payment Search
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .panel.panel-success.search-notice
+        .panel-body
+          | Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+  .row.addon-row.addon-row-attached
+    .col-sm-12
+      .row
+        .col-sm-6
+          .panel.panel-primary.search-card
+            .panel-heading
+              | Real Property tax
+              a(href="#")
+                .fa.fa-question-circle.pull-right
+            img.search-card-image(src="../assets/img/stock-personal-property.jpg")
+            .panel-body
+              form
+                .form-group
+                  a(href="#")
+                    .fa.fa-question-circle.pull-right
+                  label(for="search-real-property-input") Parcel #/tax account #
+                  input.form-control(type="text" id="search-real-property-input")
+                  p.help-block Seperate multiple entries with a comma
+                button.btn.btn-primary(type="submit" id="search-real-property-submit")
+                    | Search
+                    | &nbsp;
+                    span.fa.fa-search
+        .col-sm-6
+          .panel.panel-primary.search-card
+            .panel-heading
+              | Personal Property tax
+              a(href="#")
+                .fa.fa-question-circle.pull-right
+            img(src="../assets/img/stock-personal-property.jpg")
+            .panel-body
+              form
+                .form-group
+                  a(href="#")
+                    .fa.fa-question-circle.pull-right
+                  label(for="search-personal-property-input") Personal property tax account #
+                  .input-group
+                    span.input-group-addon 4200-
+                    input.form-control(type="text" id="search-personal-property-input")
+                  p.help-block Seperate multiple entries with a comma
+                button.btn.btn-primary(type="submit" id="search-personal-property-submit")
+                  | Search
+                  | &nbsp;
+                  span.fa.fa-search
+        .col-sm-6
+          .call-out-text.call-out-text-default.text-center
+            a(href="#")
+              | Frequently asked questions&nbsp;
+              .fa.fa-question-circle
+        .col-sm-6
+          .call-out-text.call-out-text-default.text-center
+            a(href="#")
+              | Contact us&nbsp;
+              .fa.fa-envelope-o
+block custom-js
+  if production
+    script(src="/js/custom.js")
+  else
+    script(src="/js/custom.compiled.js")

@@ -12,28 +12,21 @@ block custom-style
   else
     link(href="/styles/css/custom.css" rel='stylesheet' type='text/css')
 block main-content
-  include offcanvas-cart
   .row.addon-row.addon-row-attached
     .col-sm-12
       .page-header
-        h1 Tax Payment Receipt
+        h1 Review order
   .row.addon-row.addon-row-attached
     .col-sm-12
-      p
-        strong Thank you for your tax payment to King County Treasury. Please print or save this receipt for your records. For questions about your bill, please contact:
-      p
-        | King County Treasury
-        br
-        | 401 5th Ave, Suite 600
-        br
-        | Seattle, WA 98102
-        br
-        | (206) 666-6666
-  .row.addon-row.addon-row-attached
+      .review-header
+        p
+          strong
+            .fa.fa-shopping-cart &nbsp;
+            | Confirm cart details
     .col-sm-12
-      div(style="border-top: 1px dotted #000000; border-bottom: 1px dotted #000000")
-        h2 Itemization
-        ul.leaders(style="border-bottom:2px solid #A5C727;")
+      .review-cart
+        .review-cart-items
+          ul.leaders
             li
               span 1234567
               span $2000
@@ -42,8 +35,13 @@ block main-content
               span 8901234
               span $2000
             li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
-        .row
+            li
+              span 8901234
+              span $1562.45
+            li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+        .row.review-cart-total
           .col-sm-6
+            button.btn.btn-success#review-cart-total-update-btn Update totals
           .col-sm-6
             .cart-totals
               ul.leaders
@@ -64,19 +62,54 @@ block main-content
                   span Total
                   span $5432.45
   .row.addon-row.addon-row-attached
-    .col-sm-12
-      p Billed to:
+    .col-sm-6
       p
-        | ABC Company Inc.
-        br
-        | 123 1st Road
-        br
-        | Seattle, WA 98102
+        strong Confirm billing address
+      .media
+        .media-left
+          label
+            input(type='checkbox' checked)
+        .media-body
+          p Use this address for billing
+          p
+            | ABC Inc.
+            br
+            | First St.
+            br
+            | Seattle, WA 91919
+      .media
+        .media-left
+          label
+            input(type='checkbox')
+        .media-body
+          p Enter new address
+    .col-sm-6
+      p
+        strong Confirm shipping/receipt address
+      .media
+        .media-left
+          label
+            input(type='checkbox' checked)
+        .media-body
+          p Use this address for billing
+          p
+            | ABC Inc.
+            br
+            | First St.
+            br
+            | Seattle, WA 91919
+      .media
+        .media-left
+          label
+            input(type='checkbox')
+        .media-body
+          p Enter new address
+  .row.addon-row.addon-row-attached
     .col-sm-12
-      button.btn.btn-default Save as PDF
+      button.btn.btn-default Back to results
       | &nbsp;
       | &nbsp;
-      button.btn.btn-success Print
+      button.btn.btn-success Proceed to billing
 block custom-js
   if production
     script(src="/js/custom.js")
