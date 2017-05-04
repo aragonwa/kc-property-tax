@@ -20,7 +20,7 @@
     "less:build": "lessc --clean-css src/styles/custom.less dist/css/custom.css",
     "js:build": "uglifyjs dist/js/custom.js -o dist/js/custom.js",
     "babel:build": "babel src/js --out-file dist/js/custom.js --ignore src/js/custom.compiled.js",
-    "deploy": "surge ./dist",
+    "deploy": "surge ./dist --domain kc-property-tax.surge.sh",
     "css:theme": "uglifycss src/assets/css/kc-theme-corporate.css > dist/css/kc-theme-corporate.css",
     "css:custom": "uglifycss src/assets/css/custom.css > dist/css/custom.css",
     "postbuild": "babel-node buildScripts/distServer.js"
