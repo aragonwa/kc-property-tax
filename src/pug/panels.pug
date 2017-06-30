@@ -2,12 +2,14 @@
   .panel.panel-accordion-primary-dark.fade-in
     .panel-heading(role="tab" id="parcelAccount12345678")
       h4.panel-title
-        a(data-toggle="collapse" data-parent="#parcelPanels" href="#collapse12345678" class="collapsed" aria-expanded="false" aria-controls="collapseOnePrimary")
-          p Parcel(Account) #
+        a(data-toggle="collapse" data-parent="#parcelPanels" href="#collapse12345678" class="collapse" aria-expanded="false" aria-controls="collapseOnePrimary")
+          p ABC Inc.
           .fa.fa-plus.pull-right
           p
             strong 12345678
-    #collapse12345678.panel-collapse.collapse(role="tabpanel" aria-lablledby="parcelAccount12345678" )
+            | &nbsp;&nbsp;
+            button.btn.btn-xs.btn-danger Past Due
+    #collapse12345678.panel-collapse(role="tabpanel" aria-lablledby="parcelAccount12345678" )
       .panel-body
         .row
           .col-sm-4
@@ -35,96 +37,207 @@
         hr
         .row
           .col-sm-12
-            ul#myTabs.nav.nav-tabs(role="tablist")
-              li.active(role="presentation")
-                a#payment-details-tab(href="#payment-details-panel" role="tab" data-toggle="tab" aria-controls="payment-details-panel" aria-expanded="false") Payment details
-              li(role="presentation")
-                a#tax-year-details-tab(href="#tax-year-details-panel" role="tab" data-toggle="tab" aria-controls="tax-year-details-panel" aria-expanded="false") Tax year details
-              li(role="presentation")
-                a#receipts-tab(href="#receipts-panel" role="tab" data-toggle="tab" aria-controls="receipts-panel" aria-expanded="false") Receipts
-              li(role="presentation")
-                a#distribution-tab(href="#distribution-panel" role="tab" data-toggle="tab" aria-controls="distribution-panel" aria-expanded="false") 2017 Tax/fee distribution
-            #myTabContent.tab-content
-              #payment-details-panel.tab-pane.active.in(role="tabpanel" aria-labelledby="payment-details-panel")
-                p
-                  strong Total Amount Due: $000.00
-                p 2017 Tax amount will be available February 15, 2017.
-                p If applicable, prior year(s) taxes are delinquent.
+            .panel-group(role="tablist" aria-multiselectable="true")
+              .panel.panel-accordion-primary#details-parcelAccount12345678
+                .panel-heading(role="tab")
+                  h4.panel-title
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#payment-details-panel" aria-expanded="false" aria-controls="payment-details-panel")
+                      | Payment details
+                      span.fa.fa-plus.pull-right
+                .panel-collapse.collapse#payment-details-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                  .panel-body
+                    p
+                      strong Total Amount Due: $000.00
+                    p 2017 Tax amount will be available February 15, 2017.
+                    p If applicable, prior year(s) taxes are delinquent.
 
-                p Choose the amounts to pay now:
-                ul.leaders
-                  li
-                    span Item 1
-                    span $2000 &nbsp;
-                      button.btn.btn-primary#btn-add-amount-due Add
-                        .fa.fa-shopping-cart
-                  li
-                    span Item 2 Disabled
-                    span $5000 &nbsp;
-                      button.btn.btn-primary.disabled#btn-cancel-paper-statement Add
-                        .fa.fa-shopping-cart
-                  li
-                    span Item 3
-                    span $5000 &nbsp;
-                      button.btn.btn-primary#btn-cancel-paper-statement Add
-                        .fa.fa-shopping-cart
-              #tax-year-details-panel.tab-pane(role="tabpanel" aria-labelledby="tax-year-details-panel")
-                .table-responsive
-                  table.table.table-striped.table-bordered
-                    thead.bg-primary
-                      th(colspan="2") 2107 Tax Information
-                    tbody
-                      tr
-                        td Land value
-                        td $244,000
-                      tr
-                        td Improvement value
-                        td $266,000
-                      tr
-                        td Levy value
-                        td 0010
-                      tr
-                        td Status
-                        td Taxable
-                      tr
-                        td Omit year
-                        td 0000
-                      tr
-                        td
-                          strong Tax
-                        td
-                          strong $4,716.49
-                      tr
-                        td(colspan="2") Other charges
-                      tr
-                        td Surface Water
-                        td $543.98
-                      tr
-                        td Noxious Weed
-                        td $3.20
-                      tr
-                        td Conservation
-                        td $9.45
-                      tr
-                        td
-                          strong Total billed
-                        td
-                          strong $5,273.12
-                      tr
-                        td Amount paid
-                        td $2,636.56
-                      tr
-                        td Interest
-                        td $0.00
-                      tr
-                        td Penalty
-                        td $0.00
-                      tr
-                        td
-                          strong 2017 balance
-                        td
-                          strong $2,636.56
-              #receipts-panel.tab-pane(role="tabpanel" aria-labelledby="receipts-panel")
-                p Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.
-              #distribution-panel.tab-pane(role="tabpanel" aria-labelledby="distribution-panel")
-                p  Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n
+                    p Choose the amounts to pay now:
+                    ul.leaders
+                      li
+                        span Item 1
+                        span $2000 &nbsp;
+                          button.btn.btn-primary#btn-add-amount-due Add
+                            .fa.fa-shopping-cart
+                      li
+                        span Item 2 Disabled
+                        span $5000 &nbsp;
+                          button.btn.btn-primary.disabled#btn-cancel-paper-statement Add
+                            .fa.fa-shopping-cart
+                      li
+                        span Item 3
+                        span $5000 &nbsp;
+                          button.btn.btn-primary#btn-cancel-paper-statement Add
+                            .fa.fa-shopping-cart
+
+                .panel-heading(role="tab")
+                  h4.panel-title
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#tax-year-details-panel" aria-expanded="false" aria-controls="tax-year-details-panel")
+                      | Tax year details
+                      span.fa.fa-plus.pull-right
+                .panel-collapse.collapse#tax-year-details-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                  .panel-body
+                    .table-responsive
+                      table.table.table-striped.table-bordered
+                        thead.bg-primary
+                          th(colspan="2") 2107 Tax Information
+                        tbody
+                          tr
+                            td Land value
+                            td $244,000
+                          tr
+                            td Improvement value
+                            td $266,000
+                          tr
+                            td Levy value
+                            td 0010
+                          tr
+                            td Status
+                            td Taxable
+                          tr
+                            td Omit year
+                            td 0000
+                          tr
+                            td
+                              strong Tax
+                            td
+                              strong $4,716.49
+                          tr
+                            td(colspan="2") Other charges
+                          tr
+                            td Surface Water
+                            td $543.98
+                          tr
+                            td Noxious Weed
+                            td $3.20
+                          tr
+                            td Conservation
+                            td $9.45
+                          tr
+                            td
+                              strong Total billed
+                            td
+                              strong $5,273.12
+                          tr
+                            td Amount paid
+                            td $2,636.56
+                          tr
+                            td Interest
+                            td $0.00
+                          tr
+                            td Penalty
+                            td $0.00
+                          tr
+                            td
+                              strong 2017 balance
+                            td
+                              strong $2,636.56
+                .panel-heading(role="tab")
+                  h4.panel-title
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#receipts-panel" aria-expanded="false" aria-controls="receipts-panel")
+                      | Receipts
+                      span.fa.fa-plus.pull-right
+                .panel-collapse.collapse#receipts-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                  .panel-body
+                    p Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n
+                .panel-heading(role="tab")
+                  h4.panel-title
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#distribution-panel-panel" aria-expanded="false" aria-controls="distribution-panel-panel")
+                      | 2017 Tax/fee distribution
+                      span.fa.fa-plus.pull-right
+                .panel-collapse.collapse#distribution-panel-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                  .panel-body
+                    p Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.
+
+            //- ul#myTabs.nav.nav-tabs(role="tablist")
+            //-   li.active(role="presentation")
+            //-     a#payment-details-tab(href="#payment-details-panel" role="tab" data-toggle="tab" aria-controls="payment-details-panel" aria-expanded="false") Payment details
+            //-   li(role="presentation")
+            //-     a#tax-year-details-tab(href="#tax-year-details-panel" role="tab" data-toggle="tab" aria-controls="tax-year-details-panel" aria-expanded="false") Tax year details
+            //-   li(role="presentation")
+            //-     a#receipts-tab(href="#receipts-panel" role="tab" data-toggle="tab" aria-controls="receipts-panel" aria-expanded="false") Receipts
+            //-   li(role="presentation")
+            //-     a#distribution-tab(href="#distribution-panel" role="tab" data-toggle="tab" aria-controls="distribution-panel" aria-expanded="false") 2017 Tax/fee distribution
+            //- #myTabContent.tab-content
+            //-   #payment-details-panel.tab-pane.active.in(role="tabpanel" aria-labelledby="payment-details-panel")
+            //-     p
+            //-       strong Total Amount Due: $000.00
+            //-     p 2017 Tax amount will be available February 15, 2017.
+            //-     p If applicable, prior year(s) taxes are delinquent.
+
+            //-     p Choose the amounts to pay now:
+            //-     ul.leaders
+            //-       li
+            //-         span Item 1
+            //-         span $2000 &nbsp;
+            //-           button.btn.btn-primary#btn-add-amount-due Add
+            //-             .fa.fa-shopping-cart
+            //-       li
+            //-         span Item 2 Disabled
+            //-         span $5000 &nbsp;
+            //-           button.btn.btn-primary.disabled#btn-cancel-paper-statement Add
+            //-             .fa.fa-shopping-cart
+            //-       li
+            //-         span Item 3
+            //-         span $5000 &nbsp;
+            //-           button.btn.btn-primary#btn-cancel-paper-statement Add
+            //-             .fa.fa-shopping-cart
+            //-   #tax-year-details-panel.tab-pane(role="tabpanel" aria-labelledby="tax-year-details-panel")
+            //-     .table-responsive
+            //-       table.table.table-striped.table-bordered
+            //-         thead.bg-primary
+            //-           th(colspan="2") 2107 Tax Information
+            //-         tbody
+            //-           tr
+            //-             td Land value
+            //-             td $244,000
+            //-           tr
+            //-             td Improvement value
+            //-             td $266,000
+            //-           tr
+            //-             td Levy value
+            //-             td 0010
+            //-           tr
+            //-             td Status
+            //-             td Taxable
+            //-           tr
+            //-             td Omit year
+            //-             td 0000
+            //-           tr
+            //-             td
+            //-               strong Tax
+            //-             td
+            //-               strong $4,716.49
+            //-           tr
+            //-             td(colspan="2") Other charges
+            //-           tr
+            //-             td Surface Water
+            //-             td $543.98
+            //-           tr
+            //-             td Noxious Weed
+            //-             td $3.20
+            //-           tr
+            //-             td Conservation
+            //-             td $9.45
+            //-           tr
+            //-             td
+            //-               strong Total billed
+            //-             td
+            //-               strong $5,273.12
+            //-           tr
+            //-             td Amount paid
+            //-             td $2,636.56
+            //-           tr
+            //-             td Interest
+            //-             td $0.00
+            //-           tr
+            //-             td Penalty
+            //-             td $0.00
+            //-           tr
+            //-             td
+            //-               strong 2017 balance
+            //-             td
+            //-               strong $2,636.56
+            //-   #receipts-panel.tab-pane(role="tabpanel" aria-labelledby="receipts-panel")
+            //-     p Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.
+            //-   #distribution-panel.tab-pane(role="tabpanel" aria-labelledby="distribution-panel")
+            //-     p  Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n
