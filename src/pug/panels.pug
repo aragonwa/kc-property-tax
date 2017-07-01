@@ -1,15 +1,15 @@
 .panel-group#parcelPanels(role="tablist" aria-multiselectable="true")
   .panel.panel-accordion-primary-dark.fade-in
-    .panel-heading(role="tab" id="parcelAccount12345678")
+    .panel-heading(role="tab" id='parcelAccount'+parcelNum)
       h4.panel-title
-        a(data-toggle="collapse" data-parent="#parcelPanels" href="#collapse12345678" class="collapse" aria-expanded="false" aria-controls="collapseOnePrimary")
+        a(data-toggle="collapse" data-parent="#parcelPanels" href="#parcelNum-" + parcelNum class="collapsed" aria-expanded="false" aria-controls="collapseOnePrimary")
           p ABC Inc.
           .fa.fa-plus.pull-right
           p
-            strong 12345678
+            strong #{parcelNum}
             | &nbsp;&nbsp;
-            button.btn.btn-xs.btn-danger Past Due
-    #collapse12345678.panel-collapse(role="tabpanel" aria-lablledby="parcelAccount12345678" )
+            button.btn.btn-xs.btn-danger(id='past-due-parcel-' + parcelNum) Past Due
+    div(id="parcelNum-"+parcelNum class=parcelNum + 'panel-collapse collapse' role="tabpanel" aria-lablledby="parcelAccount" + parcelNum)
       .panel-body
         .row
           .col-sm-4
@@ -38,10 +38,10 @@
         .row
           .col-sm-12
             .panel-group(role="tablist" aria-multiselectable="true")
-              .panel.panel-accordion-primary#details-parcelAccount12345678
+              .panel.panel-accordion-primary(id='details-parcelAccount' +parcelNum)
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#payment-details-panel" aria-expanded="false" aria-controls="payment-details-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount" +parcelNum href="#payment-details-panel" aria-expanded="false" aria-controls="payment-details-panel")
                       | Payment details
                       span.fa.fa-plus.pull-right
                 .panel-collapse.collapse#payment-details-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
@@ -71,7 +71,7 @@
 
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#tax-year-details-panel" aria-expanded="false" aria-controls="tax-year-details-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+parcelNum href="#tax-year-details-panel" aria-expanded="false" aria-controls="tax-year-details-panel")
                       | Tax year details
                       span.fa.fa-plus.pull-right
                 .panel-collapse.collapse#tax-year-details-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
@@ -133,7 +133,7 @@
                               strong $2,636.56
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#receipts-panel" aria-expanded="false" aria-controls="receipts-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+ parcelNum href="#receipts-panel" aria-expanded="false" aria-controls="receipts-panel")
                       | Receipts
                       span.fa.fa-plus.pull-right
                 .panel-collapse.collapse#receipts-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
@@ -141,7 +141,7 @@
                     p Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount12345678" href="#distribution-panel-panel" aria-expanded="false" aria-controls="distribution-panel-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+parcelNum href="#distribution-panel-panel" aria-expanded="false" aria-controls="distribution-panel-panel")
                       | 2017 Tax/fee distribution
                       span.fa.fa-plus.pull-right
                 .panel-collapse.collapse#distribution-panel-panel(role="tabpanel" aria-labelledby="headingOnePrimary")

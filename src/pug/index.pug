@@ -25,15 +25,20 @@ block main-content
     .col-sm-12
       include searchInput
       .row
+        .col-sm-6
+          button.btn.btn-success.btn-block Proceed to Checkout
+          br
+        .col-sm-6
+          button.btn.btn-default.btn-block Add all charges due to cart
+          br
+      .row
         .col-sm-12.col-md-8
+          //- TODO: pass a varible to choose if it is collapse or not
+          - var parcelNum = '12345678';
           include panels
+          - var parcelNum = '87654321';
           include panels
-          .row
-            .col-sm-4.hidden-lg.hidden-md
-              button.btn.btn-success.btn-block Proceed to Checkout
-              br.visible-xs-block
-            .col-sm-5.hidden-lg.hidden-md
-              button.btn.btn-default.btn-block Add all charges due to cart
+
         .col-md-4.visible-md-block.visible-lg-block
           include cart
 block custom-js

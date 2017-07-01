@@ -133,6 +133,10 @@ $(document).keyup(function(e) {
   if (e.keyCode === 27 && $onoffcanvas.hasClass('is-open')) $onoffcanvas.onoffcanvas('hide');  // esc
 });
 
+$("[id^='past-due-parcel-']").click(function(e){
+  e.stopPropagation();
+  e.preventDefault();
+});
 // $('#review-cart-total-update-btn').click(function() {
 //   $inputs = $('.editable-input');
 //   $inputs.replaceWith(function(){
