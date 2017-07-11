@@ -1,239 +1,274 @@
 @import 'onoffcanvas.less';
-
 // Details
 .panel.panel-accordion-primary-dark {
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
-  }
-
-  &.fade-in {
-    opacity: 0;
-    animation: fadeIn .5s ease-in 1 forwards;
-  }
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
+    &.fade-in {
+        opacity: 0;
+        animation: fadeIn .5s ease-in 1 forwards;
     }
-  }
-
-  &.fade-in {
-    opacity: 0;
-    animation: fadeIn .5s ease-in 1 forwards;
-  }
-  border-top:none;
-  border-right:none;
-  border-left:none;
-  border-bottom:none;
-  -webkit-box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.75);
-  box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.75);
-  & >.panel-heading {
-    background-color: #264c5d;
-    padding-right:0;
-    padding-left:0;
-    border-radius:0;
-    padding:0;
-    a {
-      color: #FFFFFF;
-      padding: 10px 15px;
-      display:block;
-      &.collapsed{
-        display:block;
-        background: none;
-        // border-bottom: 1px solid #DDD;
-        color: #FFFFFF;
-
-      }
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
     }
-  }
-  h4.panel-title {
-    font-weight: 400;
-    position:relative;
-    a p {
-        margin-bottom:5px;
+    &.fade-in {
+        opacity: 0;
+        animation: fadeIn .5s ease-in 1 forwards;
     }
-    a p:last-child {
-        margin-bottom:0px;
-    }
-    .fa-plus {
-      padding-right:15px;
-      position: absolute;
-      right:0;
-    }
-    .fa-plus:before {
-      content:"\f068";
-    }
-    .collapsed .fa-plus:before {
-      content:"\f067";
-    }
-  }
-
-  @media (max-width:768px) {
-    .nav-tabs {
-      & > li.active::after {
-        content: ''
-      }
-      &> li {
-          float:none;
-      }
-      &> li + li {
-        padding-left: initial;
-      }
-    }
-  }
-  .tab-pane {
-    border-bottom: none;
-    border-left:none;
+    border-top:none;
     border-right:none;
-    ul.leaders {
-      li {
-          padding-bottom:20px;
-      }
+    border-left:none;
+    border-bottom:none;
+    -webkit-box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
+    &>.panel-heading {
+        background-color: #264c5d;
+        padding-right: 0;
+        padding-left: 0;
+        border-radius: 0;
+        padding: 0;
+        a {
+            color: #FFFFFF;
+            padding: 10px 15px;
+            display: block;
+            &.collapsed {
+                display: block;
+                background: none; // border-bottom: 1px solid #DDD;
+                color: #FFFFFF;
+            }
+        }
     }
-  }
+    h4.panel-title {
+        font-weight: 400;
+        position: relative;
+        a p {
+            margin-bottom: 5px;
+        }
+        a p:last-child {
+            margin-bottom: 0px;
+        }
+        .fa-plus {
+            padding-right: 15px;
+            position: absolute;
+            right: 0;
+        }
+        .fa-plus:before {
+            content: "\f068";
+        }
+        .collapsed .fa-plus:before {
+            content: "\f067";
+        }
+    }
+    @media (max-width:768px) {
+        .nav-tabs {
+            &>li.active::after {
+                content: ''
+            }
+            &>li {
+                float: none;
+            }
+            &>li+li {
+                padding-left: initial;
+            }
+        }
+    }
+    .panel-collapse {
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        ul.leaders {
+            li {
+                padding-bottom: 0px;
+                @media (min-width: 768px) {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
 }
 
 .cart {
-  .cart-title {
-    border-bottom: 1px dotted #000000;
-    border-top: 6px solid #A5C727;
-    padding:5px 0;
-    margin-top:5px;
-  }
-  .cart-items {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #A5C727;
-  }
-  .cart-totals {
-    padding:15px 0;
-  }
+    .cart-title {
+        border-bottom: 2px solid #A5C727;
+        border-top: 6px solid #A5C727;
+        padding: 5px 0;
+        margin-top: 5px;
+    }
+    .cart-items {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #A5C727;
+    }
+    .cart-totals {
+        padding: 15px 0;
+    }
 }
 
 .search-items {
-  padding-top:5px;
-  margin-bottom:0;
-  .search-item {
-    cursor: pointer;
-  }
+    padding-top: 5px;
+    margin-bottom: 0;
+    .search-item {
+        cursor: pointer;
+    }
 }
 
 // Receipt Page
 .receipt-header {
-  border-bottom: 1px dotted #000000;
+    border-bottom: 1px dotted #000000;
 }
+
 .receipt-cart {
-  border-bottom: 1px dotted #000000;
-  .receipt-cart-header {
-    padding-top:10px;
-    padding-bottom:10px;
-  }
-  .receipt-cart-items{
-    ul.leaders{
-      border-bottom:2px solid #A5C727;
-      padding-bottom:10px;
+    border-bottom: 1px dotted #000000;
+    .receipt-cart-header {
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
-  }
+    .receipt-cart-items {
+        ul.leaders {
+            border-bottom: 2px solid #A5C727;
+            padding-bottom: 10px;
+        }
+    }
 }
 
 // Review Page
 .review-header {
-  border-bottom: 1px dotted #000000;
+    border-bottom: 1px dotted #000000;
 }
+
 .review-cart {
-  border-bottom: 1px dotted #000000;
-  .review-cart-items {
-    padding-top:20px;
-    border-bottom:2px solid #A5C727;
-    padding-bottom:10px;
-  }
+    border-bottom: 1px dotted #000000;
+    .review-cart-items {
+        padding-top: 20px;
+        border-bottom: 2px solid #A5C727;
+        padding-bottom: 10px;
+    }
 }
 
 .review-cart-total {
-  padding-top: 15px;
-  padding-bottom:15px;
-  @media (max-width: 768px) {
-    #review-cart-total-update-btn {
-      margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @media (max-width: 768px) {
+        #review-cart-total-update-btn {
+            margin-bottom: 10px;
+        }
     }
-  }
 }
 
 //Search Page
 .search-notice {
-  .panel-body {
-    background-color:#e1e9c1;
-  }
+    .panel-body {
+        background-color: #e1e9c1;
+    }
 }
 
 .search-card {
-  .panel-heading {
-    .fa {
-      color:#FFFFFF;
+    .panel-heading {
+        .fa {
+            color: #FFFFFF;
+        }
     }
-  }
-  .search-card-image {
-    width:100%;
-  }
-  .panel-body{
-    background-color: #E1E9C1;
-  }
+    .search-card-image {
+        width: 100%;
+    }
+    .panel-body {
+        background-color: #E1E9C1;
+    }
 }
 
 // Shared
-
 //Leaders
 ul.leaders {
-  padding: 0;
-  overflow-x: hidden;
-  list-style: none;
-  li {
-    font-weight:700;
-    &:before {
-      float: left;
-      width: 0;
-      white-space: nowrap;
-      color: #000000;
-      content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+    padding: 0;
+    overflow-x: hidden;
+    list-style: none;
+    li {
+        font-weight: 700;
+        &:before {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            color: #000000;
+            content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+        }
     }
-  }
-  span:first-child {
-    padding-right: 0.33em;
-    background: #FFFFFF;
-  }
-  span + span {
-    float:right;
-    padding-left: 0.33em;
-    background: #FFFFFF;
-  }
-  .description {
-    font-weight:400;
-    padding-bottom:5px;
-    padding-left:10px;
-    &:before {
-      float: initial;
-      width: initial;
-      white-space: normal;
-      color: #DDDDDD;
-      content: "";
+    span:first-child {
+        padding-right: 0.33em;
+        background: #FFFFFF;
     }
-  }
+    span+span {
+        float: right;
+        padding-left: 0.33em;
+        background: #FFFFFF;
+    }
+    .description {
+        font-weight: 400;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        &:before {
+            float: initial;
+            width: initial;
+            white-space: normal;
+            color: #DDDDDD;
+            content: "";
+        }
+    }
 }
 
 // Off canvas panel
 #onoffcanvas {
-  width:100%;
-  @media (min-width: 768px) {
-    width:50%;
-  }
+    width: 100%;
+    @media (min-width: 768px) {
+        width:50%;
+    }
 }
+
 #offcanvas-cart {
-    -webkit-box-shadow: 3px 6px 10px -1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 6px 10px -1px rgba(0,0,0,0.75);
-    box-shadow: 3px 6px 10px -1px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 6px 10px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 6px 10px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 6px 10px -1px rgba(0, 0, 0, 0.75);
     border-left: 6px solid #A5C727;
-    background-color:#FFFFFF;
-    padding:15px 20px;
+    background-color: #FFFFFF;
+    padding: 15px 20px;
+}
+
+
+/*CSS to House */
+
+.onoffcanvas-tab {
+    position: absolute;
+    left: -80px;
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid transparent;
+    border-right: 30px solid #A5C727;
+    border-bottom: 30px solid transparent;
+    &:after {
+        position: absolute;
+        content: '';
+        width: 50px;
+        height: 60px;
+        background: #A5C727;
+        top: -30px;
+        left: 30px;
+    }
+    span.onoffcanvas-counter {
+        font-size: 20px;
+        width: 57px;
+        padding-left: 25px;
+        position: absolute;
+        top: -12px;
+        z-index: 100;
+        .fa {
+            display: inline;
+        }
+    }
+    @media (min-width: 992px) {
+        display: none;
+    }
 }
