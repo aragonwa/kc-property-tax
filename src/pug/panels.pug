@@ -1,14 +1,17 @@
-.panel-group#parcelPanels(role="tablist" aria-multiselectable="true")
+.panel-group(id="parcelPanels"+parcelNum role="tablist" aria-multiselectable="true")
   .panel.panel-accordion-primary-dark.fade-in
     .panel-heading(role="tab" id='parcelAccount'+parcelNum)
       h4.panel-title
-        a(data-toggle="collapse" data-parent="#parcelPanels" href="#parcelNum-" + parcelNum class="collapsed" aria-expanded="false" aria-controls="collapseOnePrimary")
-          p ABC Inc.
+        a(data-toggle="collapse" data-parent="#parcelPanels"+parcelNum href="#parcelNum-" + parcelNum class="collapsed" aria-expanded="false" aria-controls="collapseOnePrimary")
+          p #{name}
           .fa.fa-plus.pull-right
           p
             strong #{parcelNum}
             | &nbsp;&nbsp;
-            button.btn.btn-xs.btn-danger(id='past-due-parcel-' + parcelNum) Past Due
+            if pastDue
+              button.btn.btn-xs.btn-danger(id='past-due-parcel-' + parcelNum) Past Due
+            if dueNow
+              button.btn.btn-xs.btn-warning(id='due-now-parcel-' + parcelNum) Due now
     div(id="parcelNum-"+parcelNum class=parcelNum + 'panel-collapse collapse' role="tabpanel" aria-lablledby="parcelAccount" + parcelNum)
       .panel-body
         .row
@@ -16,7 +19,7 @@
             p
               strong Tax payer info
             p
-              | ABC Inc.
+              | #{name}
               br
               | First St.
               br
@@ -24,16 +27,14 @@
           .col-sm-8
             p A paper invoice will be sent to this address:
             p
-              | ABC Inc.
+              | #{name}
               br
               | First St.
               br
               | Seattle, WA 91919
-            button.btn.btn-default#btn-print-statement Print statement
-            | &nbsp; &nbsp;
             a(href="#")
-              .fa.fa-question-circle
-              | Pay by mail
+              .fa.fa-envelope
+              | &nbsp;Pay by mail
         hr
         .row
           .col-sm-12
@@ -41,40 +42,54 @@
               .panel.panel-accordion-primary(id='details-parcelAccount' +parcelNum)
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount" +parcelNum href="#payment-details-panel" aria-expanded="false" aria-controls="payment-details-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount" +parcelNum href="#payment-details-panel"+ parcelNum aria-expanded="false" aria-controls="payment-details-panel")
                       | Payment details
                       span.fa.fa-plus.pull-right
-                .panel-collapse.collapse#payment-details-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                .panel-collapse.collapse(role="tabpanel" aria-labelledby="headingOnePrimary" id="payment-details-panel"+ parcelNum)
                   .panel-body
                     p
                       strong Total Amount Due: $000.00
                     p 2017 Tax amount will be available February 15, 2017.
                     p If applicable, prior year(s) taxes are delinquent.
-
                     p Choose the amounts to pay now:
                     ul.leaders
+                      li.text-muted
+                        span
+                          | 2nd half of 2017
+                          span.hidden-xs - Cannot be paid at this time
+                        span $5000 &nbsp;
+                          button.btn.btn-primary.disabled#btn-add-to-cart2
+                            | Add to&nbsp;
+                            .fa.fa-shopping-cart
+                      li.description.visible-xs Cannot be paid at this time
                       li
-                        span Item 1
+                        span
+                          | 1st half of 2017&nbsp;
+                          span.hidden-xs
+                            em.text-warning - Due now
                         span $2000 &nbsp;
-                          button.btn.btn-primary#btn-add-amount-due Add
+                          button.btn.btn-primary#btn-add-to-cart1
+                            | Add to&nbsp;
                             .fa.fa-shopping-cart
+                      li.description.visible-xs
+                        em.text-warning Due now
                       li
-                        span Item 2 Disabled
+                        span
+                          | 2nd half of 2016&nbsp;
+                          span.hidden-xs
+                            em.text-danger - Past due
                         span $5000 &nbsp;
-                          button.btn.btn-primary.disabled#btn-cancel-paper-statement Add
-                            .fa.fa-shopping-cart
-                      li
-                        span Item 3
-                        span $5000 &nbsp;
-                          button.btn.btn-primary#btn-cancel-paper-statement Add
-                            .fa.fa-shopping-cart
-
+                          button.btn.btn-info#btn-remove
+                            | Remove&nbsp;
+                            .fa.fa-ban.fa-color-danger
+                      li.description.visible-xs
+                        em.text-danger Past due
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+parcelNum href="#tax-year-details-panel" aria-expanded="false" aria-controls="tax-year-details-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+parcelNum href="#tax-year-details-panel"+parcelNum aria-expanded="false" aria-controls="tax-year-details-panel")
                       | Tax year details
                       span.fa.fa-plus.pull-right
-                .panel-collapse.collapse#tax-year-details-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                .panel-collapse.collapse(id="tax-year-details-panel"+parcelNum role="tabpanel" aria-labelledby="headingOnePrimary")
                   .panel-body
                     .table-responsive
                       table.table.table-striped.table-bordered
@@ -133,18 +148,18 @@
                               strong $2,636.56
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+ parcelNum href="#receipts-panel" aria-expanded="false" aria-controls="receipts-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+ parcelNum href="#receipts-panel"+parcelNum aria-expanded="false" aria-controls="receipts-panel")
                       | Receipts
                       span.fa.fa-plus.pull-right
-                .panel-collapse.collapse#receipts-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                .panel-collapse.collapse(id="receipts-panel"+parcelNum role="tabpanel" aria-labelledby="headingOnePrimary")
                   .panel-body
                     p Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n
                 .panel-heading(role="tab")
                   h4.panel-title
-                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+parcelNum href="#distribution-panel-panel" aria-expanded="false" aria-controls="distribution-panel-panel")
+                    a.collapsed(data-toggle="collapse" data-parent="#details-parcelAccount"+parcelNum href="#distribution-panel"+parcelNum aria-expanded="false" aria-controls="distribution-panel")
                       | 2017 Tax/fee distribution
                       span.fa.fa-plus.pull-right
-                .panel-collapse.collapse#distribution-panel-panel(role="tabpanel" aria-labelledby="headingOnePrimary")
+                .panel-collapse.collapse(id="distribution-panel"+parcelNum role="tabpanel" aria-labelledby="headingOnePrimary")
                   .panel-body
                     p Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.
 
