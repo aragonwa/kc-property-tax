@@ -8,6 +8,14 @@
 
 [Search page](http://kc-property-tax.surge.sh/search)
 
+# Updates
+* Changed offcanvas menu tab per design
+* Adding 'past due' and 'due now' buttons/text
+* Adding remove btn
+* Changed accordion details tabs to accordions
+* Added disabled state to search page
+* Review and Receipt pages follow standard layout
+
 ## Where are the files I need?
 ```
 dist/
