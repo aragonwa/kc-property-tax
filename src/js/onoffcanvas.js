@@ -2,7 +2,7 @@
   const OnoffCanvas = function (element, options) {
     this.$element = $(element);
     this.options = $.extend({}, OnoffCanvas.DEFAULTS, options);
-    this.$trigger = $(`[data-toggle="onoffcanvas"][href="#${element.id}"],[data-toggle="onoffcanvas"][data-target="#${element.id}"]`);
+    this.$trigger = $('[data-toggle="onoffcanvas"][href="#${element.id}"],[data-toggle="onoffcanvas"][data-target="#${element.id}"]');
 
     this.addAriaCollapsedClass(this.$element, this.$trigger);
   };
@@ -51,7 +51,7 @@
 
   OnoffCanvas.prototype.getParent = function () {
     return $(this.options.parent)
-      .find(`[data-toggle="onoffcanvas"][data-parent="${this.options.parent}"]`)
+      .find('[data-toggle="onoffcanvas"][data-parent="${this.options.parent}"]')
       .each($.proxy(function (i, element) {
         const $element = $(element);
         this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element);

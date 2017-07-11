@@ -2,6 +2,10 @@
 $('.search-item').click(function(){
   $(this).remove();
 });
+// Remove all search items
+$('#clear-all').click(function(){
+  $('.search-item').remove();
+});
 
 $('.row.row-offcanvas').addClass('onoffcanvas-container');
 
@@ -21,14 +25,3 @@ $("[id^='past-due-parcel-']").click(function(e){
   e.stopPropagation();
   e.preventDefault();
 });
-// $('#review-cart-total-update-btn').click(function() {
-//   $inputs = $('.editable-input');
-//   $inputs.replaceWith(function(){
-//     if(!($inputs.hasClass('form-inline'))) {
-//       return '<form class="form-inline editable-input" style="float:right"><div class="input-group"><span class="input-group-addon">$</span><input class="form-control" value="' + ($(this)[0].innerHTML).replace('$', '') + '"></input></div></form>';
-//     } else {
-//       return '<span class="editable-input">$'+$(this)[0][0].value+'</span>';
-//     }
-//   });
-// });
-
