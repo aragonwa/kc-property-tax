@@ -15,12 +15,24 @@ block main-content
   .row.addon-row.addon-row-attached
     .col-sm-12
       .page-header
+        .pull-right
+          button.btn.btn-link
+            span.fa.fa-download.fa-lg
+          button.btn.btn-link
+            span.fa.fa-print.fa-lg
         h1 Tax payment receipt
+        h2
+          small Thank you for your payment
+
+      p
+        a(href="#")
+          span.fa.fa-arrow-left
+          | &nbsp;Back to search results
   .row.addon-row.addon-row-attached
     .col-sm-12
       .receipt-header
         p
-          strong Thank you for your tax payment to King County Treasury. Please print or save this receipt for your records. For questions about your bill, please contact:
+          strong Please print or save this receipt for your records. For questions about your bill, please contact:
         p
           | King County Treasury
           br
@@ -30,54 +42,54 @@ block main-content
           br
           | (206) 666-6666
     .col-sm-12
-      .receipt-cart
-        p.receipt-cart-header
-          strong Itemization
-        .receipt-cart-items
-          ul.leaders
-              li
-                span 1234567
-                span $2000
-              li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
-              li
-                span 8901234
-                span $2000
-              li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
-        .row
-          .col-sm-offset-6.col-sm-6
-            .cart-totals
-              ul.leaders
-                li
-                  span Subtotal
-                  span $5432.45
-                li
-                  span Service charge
-                  span $0
-                li
-                  span Tax
-                  span $0
-                li
-                  span Delivery
-                  span $0
-                br
-                li
-                  span Total
-                  span $5432.45
-  .row.addon-row.addon-row-attached
-    .col-sm-12
-      p
-        strong Billed to:
-      p
-        | ABC Company Inc.
+        p
+          strong Transaction #
+            span#transaction-number 6567656
+          br
+          | Completed: 05/18/2017, 2:00 p.m. (PST)
+        p
+          strong Billed to:
+        p
+          | ABC Company Inc.
+          br
+          | 123 1st Road
+          br
+          | Seattle, WA 98102
+        p#CC-number VISA # ****************4056
         br
-        | 123 1st Road
-        br
-        | Seattle, WA 98102
-    .col-sm-12
-      button.btn.btn-default#receipt-save-as-pdf Save as PDF
-      | &nbsp;
-      | &nbsp;
-      button.btn.btn-success#receipt-print Print
+        .receipt-cart
+          p.receipt-cart-header
+            strong Itemization
+          .receipt-cart-items
+            ul.leaders
+                li
+                  span 1234567
+                  span $2000
+                li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+                li
+                  span 8901234
+                  span $2000
+                li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+          .row
+            .col-sm-offset-6.col-sm-6
+              .cart-totals
+                ul.leaders
+                  li
+                    span Subtotal
+                    span $5432.45
+                  li
+                    span Service charge
+                    span $0
+                  li
+                    span Tax
+                    span $0
+                  li
+                    span Delivery
+                    span $0
+                  br
+                  li
+                    span Total
+                    span $5432.45
 block custom-js
   if production
     script(src="/js/custom.js")

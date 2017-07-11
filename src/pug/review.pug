@@ -15,7 +15,11 @@ block main-content
   .row.addon-row.addon-row-attached
     .col-sm-12
       .page-header
-        h1 Review order
+        h1 Tax payment review cart
+      p
+        a(href="#")
+          span.fa.fa-arrow-left
+          | &nbsp;Back to search results
   .row.addon-row.addon-row-attached
     .col-sm-12
       .review-header
@@ -26,22 +30,35 @@ block main-content
     .col-sm-12
       .review-cart
         .review-cart-items
-          ul.leaders
-            li
-              span 1234567
-              span.editable-input $2000
-            li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
-            li
-              span 8901234
-              span.editable-input $2000
-            li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
-            li
-              span 8901234
-              span.editable-input $1562.45
-            li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+          .media
+            .media-left
+              .fa.fa-times-circle.fa-color-danger
+            .media-body
+              ul.leaders
+                li
+                  span 1234567
+                  span.editable-input $2000
+                li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+          .media
+            .media-left
+              .fa.fa-times-circle.fa-color-danger
+            .media-body
+              ul.leaders
+                li
+                  span 8901234
+                  span.editable-input $2000
+                li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
+          .media
+            .media-left
+              .fa.fa-times-circle.fa-color-danger
+            .media-body
+              ul.leaders
+                li
+                  span 8901234
+                  span.editable-input $1562.45
+                li.description sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.
         .row.review-cart-total
           .col-sm-6
-            button.btn.btn-success#review-cart-total-update-btn Update totals
           .col-sm-6
             .cart-totals
               ul.leaders
@@ -61,54 +78,53 @@ block main-content
                 li
                   span Total
                   span $5432.45
-  .row.addon-row.addon-row-attached
-    .col-sm-6
-      p
-        strong Confirm billing address
-      .media
-        .media-left
-          label
-            input(type='checkbox' checked)
-        .media-body
-          p Use this address for billing
-          p
-            | ABC Inc.
-            br
-            | First St.
-            br
-            | Seattle, WA 91919
-      .media
-        .media-left
-          label
-            input(type='checkbox')
-        .media-body
-          p Enter new address
-    .col-sm-6
-      p
-        strong Confirm shipping/receipt address
-      .media
-        .media-left
-          label
-            input(type='checkbox' checked)
-        .media-body
-          p Use this address for billing
-          p
-            | ABC Inc.
-            br
-            | First St.
-            br
-            | Seattle, WA 91919
-      .media
-        .media-left
-          label
-            input(type='checkbox')
-        .media-body
-          p Enter new address
+  //- .row.addon-row.addon-row-attached
+  //-   .col-sm-6
+  //-     p
+  //-       strong Confirm billing address
+  //-     .media
+  //-       .media-left
+  //-         label
+  //-           input(type='checkbox' checked)
+  //-       .media-body
+  //-         p Use this address for billing
+  //-         p
+  //-           | ABC Inc.
+  //-           br
+  //-           | First St.
+  //-           br
+  //-           | Seattle, WA 91919
+  //-     .media
+  //-       .media-left
+  //-         label
+  //-           input(type='checkbox')
+  //-       .media-body
+  //-         p Enter new address
+  //-   .col-sm-6
+  //-     p
+  //-       strong Confirm shipping/receipt address
+  //-     .media
+  //-       .media-left
+  //-         label
+  //-           input(type='checkbox' checked)
+  //-       .media-body
+  //-         p Use this address for billing
+  //-         p
+  //-           | ABC Inc.
+  //-           br
+  //-           | First St.
+  //-           br
+  //-           | Seattle, WA 91919
+  //-     .media
+  //-       .media-left
+  //-         label
+  //-           input(type='checkbox')
+  //-       .media-body
+  //-         p Enter new address
   .row.addon-row.addon-row-attached
     .col-sm-12
-      button.btn.btn-default Back to results
-      | &nbsp;
-      | &nbsp;
+      p * You will be charged a service charge based on your payment type.
+    .col-sm-12
       button.btn.btn-success Proceed to billing
 block custom-js
   if production

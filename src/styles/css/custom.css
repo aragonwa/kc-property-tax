@@ -242,11 +242,13 @@ button.onoffcanvas-toggler {
 }
 .receipt-header {
   border-bottom: 1px dotted #000000;
+  margin-bottom: 10px;
 }
 .receipt-cart {
-  border-bottom: 1px dotted #000000;
+  border-bottom: 6px solid #A5C727;
 }
 .receipt-cart .receipt-cart-header {
+  border-bottom: 6px solid #A5C727;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -255,10 +257,10 @@ button.onoffcanvas-toggler {
   padding-bottom: 10px;
 }
 .review-header {
-  border-bottom: 1px dotted #000000;
+  border-bottom: 6px solid #A5C727;
 }
 .review-cart {
-  border-bottom: 1px dotted #000000;
+  border-bottom: 6px solid #A5C727;
 }
 .review-cart .review-cart-items {
   padding-top: 20px;
