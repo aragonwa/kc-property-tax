@@ -606,18 +606,28 @@
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
                 <div class="page-header">
+                  <div class="pull-right">
+                    <button class="btn btn-link"><span class="fa fa-download fa-lg"></span></button>
+                    <button class="btn btn-link"><span class="fa fa-print fa-lg"></span></button>
+                  </div>
                   <h1>Tax payment receipt</h1>
+                  <h2><small>Thank you for your payment</small></h2>
                 </div>
+                <p><a href="#"><span class="fa fa-arrow-left"></span>&nbsp;Back to search results</a></p>
               </div>
             </div>
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
                 <div class="receipt-header">
-                  <p><strong>Thank you for your tax payment to King County Treasury. Please print or save this receipt for your records. For questions about your bill, please contact:</strong></p>
+                  <p><strong>Please print or save this receipt for your records. For questions about your bill, please contact:</strong></p>
                   <p>King County Treasury<br>401 5th Ave, Suite 600<br>Seattle, WA 98102<br>(206) 666-6666</p>
                 </div>
               </div>
               <div class="col-sm-12">
+                <p><strong>Transaction #<span id="transaction-number">6567656</span></strong><br>Completed: 05/18/2017, 2:00 p.m. (PST)</p>
+                <p><strong>Billed to:</strong></p>
+                <p>ABC Company Inc.<br>123 1st Road<br>Seattle, WA 98102</p>
+                <p id="CC-number">VISA # ****************4056</p><br>
                 <div class="receipt-cart">
                   <p class="receipt-cart-header"><strong>Itemization</strong></p>
                   <div class="receipt-cart-items">
@@ -642,18 +652,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="row addon-row addon-row-attached">
-              <div class="col-sm-12">
-                <p><strong>Billed to:</strong></p>
-                <p>ABC Company Inc.<br>123 1st Road<br>Seattle, WA 98102</p>
-              </div>
-              <div class="col-sm-12">
-                <button class="btn btn-default" id="receipt-save-as-pdf">Save as PDF</button>
-                &nbsp;
-                &nbsp;
-                <button class="btn btn-success" id="receipt-print">Print</button>
               </div>
             </div>
             <div class="row addon-row addon-row-transparent main-share-links">

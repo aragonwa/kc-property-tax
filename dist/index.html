@@ -604,6 +604,7 @@
             </div>
             <!-- PAGE CONTENT BEGINS HERE-->
             <div class="onoffcanvas is-right" id="onoffcanvas" aria-expanded="false">
+              <div class="onoffcanvas-tab" data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="false"><span class="onoffcanvas-counter">1<span class="fa fa-shopping-cart"></span></span></div>
               <div id="offcanvas-cart">
                 <button class="close" type="button" data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="true">
                   <div class="fa fa-close"></div>
@@ -629,21 +630,19 @@
                       <li><span>Total</span><span>$5432.45</span></li>
                     </ul>
                   </div>
-                  <button class="btn btn-success btn-block">Proceed to Checkout</button><br>
-                  <button class="btn btn-default btn-block">Add all charges due to cart</button>
+                  <button class="btn btn-success btn-block">Proceed to Checkout</button>
                 </div>
               </div>
             </div>
             <div class="row addon-row addon-row-attached">
               <div class="col-sm-12">
-                <div class="page-header"><span class="remove-border-bottom">
-                    <button class="btn btn-lg btn-success pull-right hidden-md hidden-lg" data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="false"><span class="fa fa-shopping-cart"></span>&nbsp; Cart (3)</button></span>
+                <div class="page-header">
                   <h1>Real Property details</h1>
                 </div>
               </div>
             </div>
             <div class="row addon-row addon-row-attached">
-              <div class="col-sm-12">
+              <div class="col-sm-12 col-md-8">
                 <div class="call-out-text call-out-text-success">
                   <label for="searchParcel">Search for another parcel</label>
                   <div class="input-group">
@@ -653,149 +652,182 @@
                       </button></span>
                   </div>
                   <ul class="list-inline search-items">
-                    <li class="search-item" id="item123456789">
+                    <li class="search-item" id="item12345">
                       <div class="fa fa-times fa-color-danger"></div>&nbsp;item1
                     </li>
-                    <li class="search-item" id="item123456789">
+                    <li class="search-item" id="item6789">
                       <div class="fa fa-times fa-color-danger"></div>&nbsp;item2
                     </li>
-                    <li class="search-item" id="item123456789">
+                    <li class="search-item" id="item01234">
                       <div class="fa fa-times fa-color-danger"></div>&nbsp;item3
                     </li>
-                    <li class="search-item" id="item123456789">
+                    <li class="search-item" id="item56789">
                       <div class="fa fa-times fa-color-danger"></div>&nbsp;item4
+                    </li>
+                    <li class="search-item" id="clear-all">
+                      <div class="fa fa-times fa-color-danger"></div>&nbsp;Clear all
                     </li>
                   </ul>
                 </div>
                 <div class="row">
-                  <div class="col-sm-12 col-md-8">
-                    <div class="panel-group" id="parcelPanels" role="tablist" aria-multiselectable="true">
+                  <div class="col-sm-6">
+                    <button class="btn btn-primary btn-block">$17,450.00 due now - Add to
+                      <div class="fa fa-shopping-cart"></div>
+                    </button><br>
+                  </div>
+                  <div class="col-sm-6">
+                    <button class="btn btn-success btn-block">Proceed to Checkout</button><br>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="panel-group" id="parcelPanels34878" role="tablist" aria-multiselectable="true">
                       <div class="panel panel-accordion-primary-dark fade-in">
-                        <div class="panel-heading" role="tab" id="parcelAccount12345678">
-                          <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#parcelPanels" href="#collapse12345678" aria-expanded="false" aria-controls="collapseOnePrimary">
-                              <p>Parcel(Account) #</p>
+                        <div class="panel-heading" role="tab" id="parcelAccount34878">
+                          <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#parcelPanels34878" href="#parcelNum-34878" aria-expanded="false" aria-controls="collapseOnePrimary">
+                              <p>Starbucks</p>
                               <div class="fa fa-plus pull-right"></div>
-                              <p><strong>12345678</strong></p></a></h4>
+                              <p><strong>34878</strong>&nbsp;&nbsp;
+                                <button class="btn btn-xs btn-danger" id="past-due-parcel-34878">Past Due</button>
+                              </p></a></h4>
                         </div>
-                        <div class="panel-collapse collapse" id="collapse12345678" role="tabpanel" aria-lablledby="parcelAccount12345678">
+                        <div class="34878panel-collapse collapse" id="parcelNum-34878" role="tabpanel" aria-lablledby="parcelAccount34878">
                           <div class="panel-body">
                             <div class="row">
                               <div class="col-sm-4">
                                 <p><strong>Tax payer info</strong></p>
-                                <p>ABC Inc.<br>First St.<br>Seattle, WA 91919</p>
+                                <p>Starbucks<br>First St.<br>Seattle, WA 91919</p>
                               </div>
                               <div class="col-sm-8">
                                 <p>A paper invoice will be sent to this address:</p>
-                                <p>ABC Inc.<br>First St.<br>Seattle, WA 91919</p>
-                                <button class="btn btn-default" id="btn-print-statement">Print statement</button>&nbsp; &nbsp;<a href="#">
-                                  <div class="fa fa-question-circle"></div>Pay by mail</a>
+                                <p>Starbucks<br>First St.<br>Seattle, WA 91919</p><a href="#">
+                                  <div class="fa fa-envelope"></div>&nbsp;Pay by mail</a>
                               </div>
                             </div>
                             <hr>
                             <div class="row">
                               <div class="col-sm-12">
-                                <ul class="nav nav-tabs" id="myTabs" role="tablist">
-                                  <li class="active" role="presentation"><a id="payment-details-tab" href="#payment-details-panel" role="tab" data-toggle="tab" aria-controls="payment-details-panel" aria-expanded="false">Payment details</a></li>
-                                  <li role="presentation"><a id="tax-year-details-tab" href="#tax-year-details-panel" role="tab" data-toggle="tab" aria-controls="tax-year-details-panel" aria-expanded="false">Tax year details</a></li>
-                                  <li role="presentation"><a id="receipts-tab" href="#receipts-panel" role="tab" data-toggle="tab" aria-controls="receipts-panel" aria-expanded="false">Receipts</a></li>
-                                  <li role="presentation"><a id="distribution-tab" href="#distribution-panel" role="tab" data-toggle="tab" aria-controls="distribution-panel" aria-expanded="false">2017 Tax/fee distribution</a></li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                  <div class="tab-pane active in" id="payment-details-panel" role="tabpanel" aria-labelledby="payment-details-panel">
-                                    <p><strong>Total Amount Due: $000.00</strong></p>
-                                    <p>2017 Tax amount will be available February 15, 2017.</p>
-                                    <p>If applicable, prior year(s) taxes are delinquent.</p>
-                                    <p>Choose the amounts to pay now:</p>
-                                    <ul class="leaders">
-                                      <li><span>Item 1</span><span>$2000 &nbsp;
-                                          <button class="btn btn-primary" id="btn-add-amount-due">Add
-                                            <div class="fa fa-shopping-cart"></div>
-                                          </button></span></li>
-                                      <li><span>Item 2 Disabled</span><span>$5000 &nbsp;
-                                          <button class="btn btn-primary disabled" id="btn-cancel-paper-statement">Add
-                                            <div class="fa fa-shopping-cart"></div>
-                                          </button></span></li>
-                                      <li><span>Item 3</span><span>$5000 &nbsp;
-                                          <button class="btn btn-primary" id="btn-cancel-paper-statement">Add
-                                            <div class="fa fa-shopping-cart"></div>
-                                          </button></span></li>
-                                    </ul>
-                                  </div>
-                                  <div class="tab-pane" id="tax-year-details-panel" role="tabpanel" aria-labelledby="tax-year-details-panel">
-                                    <div class="table-responsive">
-                                      <table class="table table-striped table-bordered">
-                                        <thead class="bg-primary">
-                                          <th colspan="2">2107 Tax Information</th>
-                                        </thead>
-                                        <tbody>
-                                          <tr>
-                                            <td>Land value</td>
-                                            <td>$244,000</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Improvement value</td>
-                                            <td>$266,000</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Levy value</td>
-                                            <td>0010</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Status</td>
-                                            <td>Taxable</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Omit year</td>
-                                            <td>0000</td>
-                                          </tr>
-                                          <tr>
-                                            <td><strong>Tax</strong></td>
-                                            <td><strong>$4,716.49</strong></td>
-                                          </tr>
-                                          <tr>
-                                            <td colspan="2">Other charges</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Surface Water</td>
-                                            <td>$543.98</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Noxious Weed</td>
-                                            <td>$3.20</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Conservation</td>
-                                            <td>$9.45</td>
-                                          </tr>
-                                          <tr>
-                                            <td><strong>Total billed</strong></td>
-                                            <td><strong>$5,273.12</strong></td>
-                                          </tr>
-                                          <tr>
-                                            <td>Amount paid</td>
-                                            <td>$2,636.56</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Interest</td>
-                                            <td>$0.00</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Penalty</td>
-                                            <td>$0.00</td>
-                                          </tr>
-                                          <tr>
-                                            <td><strong>2017 balance</strong></td>
-                                            <td><strong>$2,636.56</strong></td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
+                                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                                  <div class="panel panel-accordion-primary" id="details-parcelAccount34878">
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount34878" href="#payment-details-panel34878" aria-expanded="false" aria-controls="payment-details-panel">Payment details<span class="fa fa-plus pull-right"></span></a></h4>
                                     </div>
-                                  </div>
-                                  <div class="tab-pane" id="receipts-panel" role="tabpanel" aria-labelledby="receipts-panel">
-                                    <p>Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.</p>
-                                  </div>
-                                  <div class="tab-pane" id="distribution-panel" role="tabpanel" aria-labelledby="distribution-panel">
-                                    <p> Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n</p>
+                                    <div class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOnePrimary" id="payment-details-panel34878">
+                                      <div class="panel-body">
+                                        <p><strong>Total Amount Due: $000.00</strong></p>
+                                        <p>2017 Tax amount will be available February 15, 2017.</p>
+                                        <p>If applicable, prior year(s) taxes are delinquent.</p>
+                                        <p>Choose the amounts to pay now:</p>
+                                        <ul class="leaders">
+                                          <li class="text-muted"><span>2nd half of 2017<span class="hidden-xs">- Cannot be paid at this time</span></span><span>$5000 &nbsp;
+                                              <button class="btn btn-primary disabled" id="btn-add-to-cart2">Add to&nbsp;
+                                                <div class="fa fa-shopping-cart"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs">Cannot be paid at this time</li>
+                                          <li><span>1st half of 2017&nbsp;<span class="hidden-xs"><em class="text-warning">- Due now</em></span></span><span>$2000 &nbsp;
+                                              <button class="btn btn-primary" id="btn-add-to-cart1">Add to&nbsp;
+                                                <div class="fa fa-shopping-cart"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs"><em class="text-warning">Due now</em></li>
+                                          <li><span>2nd half of 2016&nbsp;<span class="hidden-xs"><em class="text-danger">- Past due</em></span></span><span>$5000 &nbsp;
+                                              <button class="btn btn-info" id="btn-remove">Remove&nbsp;
+                                                <div class="fa fa-ban fa-color-danger"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs"><em class="text-danger">Past due</em></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount34878" href="#tax-year-details-panel34878" aria-expanded="false" aria-controls="tax-year-details-panel">Tax year details<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="tax-year-details-panel34878" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <div class="table-responsive">
+                                          <table class="table table-striped table-bordered">
+                                            <thead class="bg-primary">
+                                              <th colspan="2">2107 Tax Information</th>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Land value</td>
+                                                <td>$244,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Improvement value</td>
+                                                <td>$266,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Levy value</td>
+                                                <td>0010</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Status</td>
+                                                <td>Taxable</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Omit year</td>
+                                                <td>0000</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>Tax</strong></td>
+                                                <td><strong>$4,716.49</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="2">Other charges</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Surface Water</td>
+                                                <td>$543.98</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Noxious Weed</td>
+                                                <td>$3.20</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Conservation</td>
+                                                <td>$9.45</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>Total billed</strong></td>
+                                                <td><strong>$5,273.12</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Amount paid</td>
+                                                <td>$2,636.56</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Interest</td>
+                                                <td>$0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Penalty</td>
+                                                <td>$0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>2017 balance</strong></td>
+                                                <td><strong>$2,636.56</strong></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount34878" href="#receipts-panel34878" aria-expanded="false" aria-controls="receipts-panel">Receipts<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="receipts-panel34878" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <p>Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n</p>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount34878" href="#distribution-panel34878" aria-expanded="false" aria-controls="distribution-panel">2017 Tax/fee distribution<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="distribution-panel34878" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <p>Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.</p>
+                                      </div>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -804,41 +836,341 @@
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-4 hidden-lg hidden-md">
-                        <button class="btn btn-success btn-block">Proceed to Checkout</button><br class="visible-xs-block">
+                    <div class="panel-group" id="parcelPanels99780" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-accordion-primary-dark fade-in">
+                        <div class="panel-heading" role="tab" id="parcelAccount99780">
+                          <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#parcelPanels99780" href="#parcelNum-99780" aria-expanded="false" aria-controls="collapseOnePrimary">
+                              <p>Jim Smith Inc.</p>
+                              <div class="fa fa-plus pull-right"></div>
+                              <p><strong>99780</strong>&nbsp;&nbsp;
+                              </p></a></h4>
+                        </div>
+                        <div class="99780panel-collapse collapse" id="parcelNum-99780" role="tabpanel" aria-lablledby="parcelAccount99780">
+                          <div class="panel-body">
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <p><strong>Tax payer info</strong></p>
+                                <p>Jim Smith Inc.<br>First St.<br>Seattle, WA 91919</p>
+                              </div>
+                              <div class="col-sm-8">
+                                <p>A paper invoice will be sent to this address:</p>
+                                <p>Jim Smith Inc.<br>First St.<br>Seattle, WA 91919</p><a href="#">
+                                  <div class="fa fa-envelope"></div>&nbsp;Pay by mail</a>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                                  <div class="panel panel-accordion-primary" id="details-parcelAccount99780">
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount99780" href="#payment-details-panel99780" aria-expanded="false" aria-controls="payment-details-panel">Payment details<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOnePrimary" id="payment-details-panel99780">
+                                      <div class="panel-body">
+                                        <p><strong>Total Amount Due: $000.00</strong></p>
+                                        <p>2017 Tax amount will be available February 15, 2017.</p>
+                                        <p>If applicable, prior year(s) taxes are delinquent.</p>
+                                        <p>Choose the amounts to pay now:</p>
+                                        <ul class="leaders">
+                                          <li class="text-muted"><span>2nd half of 2017<span class="hidden-xs">- Cannot be paid at this time</span></span><span>$5000 &nbsp;
+                                              <button class="btn btn-primary disabled" id="btn-add-to-cart2">Add to&nbsp;
+                                                <div class="fa fa-shopping-cart"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs">Cannot be paid at this time</li>
+                                          <li><span>1st half of 2017&nbsp;<span class="hidden-xs"><em class="text-warning">- Due now</em></span></span><span>$2000 &nbsp;
+                                              <button class="btn btn-primary" id="btn-add-to-cart1">Add to&nbsp;
+                                                <div class="fa fa-shopping-cart"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs"><em class="text-warning">Due now</em></li>
+                                          <li><span>2nd half of 2016&nbsp;<span class="hidden-xs"><em class="text-danger">- Past due</em></span></span><span>$5000 &nbsp;
+                                              <button class="btn btn-info" id="btn-remove">Remove&nbsp;
+                                                <div class="fa fa-ban fa-color-danger"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs"><em class="text-danger">Past due</em></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount99780" href="#tax-year-details-panel99780" aria-expanded="false" aria-controls="tax-year-details-panel">Tax year details<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="tax-year-details-panel99780" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <div class="table-responsive">
+                                          <table class="table table-striped table-bordered">
+                                            <thead class="bg-primary">
+                                              <th colspan="2">2107 Tax Information</th>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Land value</td>
+                                                <td>$244,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Improvement value</td>
+                                                <td>$266,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Levy value</td>
+                                                <td>0010</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Status</td>
+                                                <td>Taxable</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Omit year</td>
+                                                <td>0000</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>Tax</strong></td>
+                                                <td><strong>$4,716.49</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="2">Other charges</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Surface Water</td>
+                                                <td>$543.98</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Noxious Weed</td>
+                                                <td>$3.20</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Conservation</td>
+                                                <td>$9.45</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>Total billed</strong></td>
+                                                <td><strong>$5,273.12</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Amount paid</td>
+                                                <td>$2,636.56</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Interest</td>
+                                                <td>$0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Penalty</td>
+                                                <td>$0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>2017 balance</strong></td>
+                                                <td><strong>$2,636.56</strong></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount99780" href="#receipts-panel99780" aria-expanded="false" aria-controls="receipts-panel">Receipts<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="receipts-panel99780" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <p>Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n</p>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount99780" href="#distribution-panel99780" aria-expanded="false" aria-controls="distribution-panel">2017 Tax/fee distribution<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="distribution-panel99780" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <p>Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="col-sm-5 hidden-lg hidden-md">
-                        <button class="btn btn-default btn-block">Add all charges due to cart</button>
+                    </div>
+                    <div class="panel-group" id="parcelPanels91730" role="tablist" aria-multiselectable="true">
+                      <div class="panel panel-accordion-primary-dark fade-in">
+                        <div class="panel-heading" role="tab" id="parcelAccount91730">
+                          <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#parcelPanels91730" href="#parcelNum-91730" aria-expanded="false" aria-controls="collapseOnePrimary">
+                              <p>Buck Star</p>
+                              <div class="fa fa-plus pull-right"></div>
+                              <p><strong>91730</strong>&nbsp;&nbsp;
+                                <button class="btn btn-xs btn-warning" id="due-now-parcel-91730">Due now</button>
+                              </p></a></h4>
+                        </div>
+                        <div class="91730panel-collapse collapse" id="parcelNum-91730" role="tabpanel" aria-lablledby="parcelAccount91730">
+                          <div class="panel-body">
+                            <div class="row">
+                              <div class="col-sm-4">
+                                <p><strong>Tax payer info</strong></p>
+                                <p>Buck Star<br>First St.<br>Seattle, WA 91919</p>
+                              </div>
+                              <div class="col-sm-8">
+                                <p>A paper invoice will be sent to this address:</p>
+                                <p>Buck Star<br>First St.<br>Seattle, WA 91919</p><a href="#">
+                                  <div class="fa fa-envelope"></div>&nbsp;Pay by mail</a>
+                              </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                              <div class="col-sm-12">
+                                <div class="panel-group" role="tablist" aria-multiselectable="true">
+                                  <div class="panel panel-accordion-primary" id="details-parcelAccount91730">
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount91730" href="#payment-details-panel91730" aria-expanded="false" aria-controls="payment-details-panel">Payment details<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOnePrimary" id="payment-details-panel91730">
+                                      <div class="panel-body">
+                                        <p><strong>Total Amount Due: $000.00</strong></p>
+                                        <p>2017 Tax amount will be available February 15, 2017.</p>
+                                        <p>If applicable, prior year(s) taxes are delinquent.</p>
+                                        <p>Choose the amounts to pay now:</p>
+                                        <ul class="leaders">
+                                          <li class="text-muted"><span>2nd half of 2017<span class="hidden-xs">- Cannot be paid at this time</span></span><span>$5000 &nbsp;
+                                              <button class="btn btn-primary disabled" id="btn-add-to-cart2">Add to&nbsp;
+                                                <div class="fa fa-shopping-cart"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs">Cannot be paid at this time</li>
+                                          <li><span>1st half of 2017&nbsp;<span class="hidden-xs"><em class="text-warning">- Due now</em></span></span><span>$2000 &nbsp;
+                                              <button class="btn btn-primary" id="btn-add-to-cart1">Add to&nbsp;
+                                                <div class="fa fa-shopping-cart"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs"><em class="text-warning">Due now</em></li>
+                                          <li><span>2nd half of 2016&nbsp;<span class="hidden-xs"><em class="text-danger">- Past due</em></span></span><span>$5000 &nbsp;
+                                              <button class="btn btn-info" id="btn-remove">Remove&nbsp;
+                                                <div class="fa fa-ban fa-color-danger"></div>
+                                              </button></span></li>
+                                          <li class="description visible-xs"><em class="text-danger">Past due</em></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount91730" href="#tax-year-details-panel91730" aria-expanded="false" aria-controls="tax-year-details-panel">Tax year details<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="tax-year-details-panel91730" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <div class="table-responsive">
+                                          <table class="table table-striped table-bordered">
+                                            <thead class="bg-primary">
+                                              <th colspan="2">2107 Tax Information</th>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>Land value</td>
+                                                <td>$244,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Improvement value</td>
+                                                <td>$266,000</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Levy value</td>
+                                                <td>0010</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Status</td>
+                                                <td>Taxable</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Omit year</td>
+                                                <td>0000</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>Tax</strong></td>
+                                                <td><strong>$4,716.49</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td colspan="2">Other charges</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Surface Water</td>
+                                                <td>$543.98</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Noxious Weed</td>
+                                                <td>$3.20</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Conservation</td>
+                                                <td>$9.45</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>Total billed</strong></td>
+                                                <td><strong>$5,273.12</strong></td>
+                                              </tr>
+                                              <tr>
+                                                <td>Amount paid</td>
+                                                <td>$2,636.56</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Interest</td>
+                                                <td>$0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td>Penalty</td>
+                                                <td>$0.00</td>
+                                              </tr>
+                                              <tr>
+                                                <td><strong>2017 balance</strong></td>
+                                                <td><strong>$2,636.56</strong></td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount91730" href="#receipts-panel91730" aria-expanded="false" aria-controls="receipts-panel">Receipts<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="receipts-panel91730" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <p>Mauris mattis turpis quis nulla vulputate, non vulputate elit interdum. Vivamus in eleifend sem. Ut ultrices, nisi et porttitor dapibus, quam augue efficitur est, in lobortis n</p>
+                                      </div>
+                                    </div>
+                                    <div class="panel-heading" role="tab">
+                                      <h4 class="panel-title"><a class="collapsed" data-toggle="collapse" data-parent="#details-parcelAccount91730" href="#distribution-panel91730" aria-expanded="false" aria-controls="distribution-panel">2017 Tax/fee distribution<span class="fa fa-plus pull-right"></span></a></h4>
+                                    </div>
+                                    <div class="panel-collapse collapse" id="distribution-panel91730" role="tabpanel" aria-labelledby="headingOnePrimary">
+                                      <div class="panel-body">
+                                        <p>Nunc sed interdum mi. Aenean vitae velit non lacus ultricies varius. Proin at felis ornare, tincidunt diam vitae, dignissim ipsum.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4 visible-md-block visible-lg-block">
-                    <div class="cart">
-                      <div class="cart-title"><span class="fa fa-shopping-cart"></span>&nbsp; MY CART</div>
-                      <div class="cart-items">
-                        <ul class="leaders">
-                          <li><span>1234567</span><span>$2000</span></li>
-                          <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                          <li><span>8901234</span><span>$2000</span></li>
-                          <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                          <li><span>8901234</span><span>$1562.45</span></li>
-                          <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
-                        </ul>
-                      </div>
-                      <div class="cart-totals">
-                        <ul class="leaders">
-                          <li><span>Subtotal</span><span>$5432.45</span></li>
-                          <li><span>Service charge</span><span>$0</span></li>
-                          <li><span>Tax</span><span>$0</span></li>
-                          <li><span>Delivery</span><span>$0</span></li><br>
-                          <li><span>Total</span><span>$5432.45</span></li>
-                        </ul>
-                      </div>
-                      <button class="btn btn-success btn-block">Proceed to Checkout</button><br>
-                      <button class="btn btn-default btn-block">Add all charges due to cart</button>
-                    </div>
+                </div>
+              </div>
+              <div class="col-md-4 visible-md-block visible-lg-block">
+                <div class="cart">
+                  <div class="cart-title"><span class="fa fa-shopping-cart"></span>&nbsp; MY CART</div>
+                  <div class="cart-items">
+                    <ul class="leaders">
+                      <li><span>1234567</span><span>$2000</span></li>
+                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
+                      <li><span>8901234</span><span>$2000</span></li>
+                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
+                      <li><span>8901234</span><span>$1562.45</span></li>
+                      <li class="description">sque in. Donec imperdiet fringilla dui, vel malesuada velit volutpat sed. Curabitur lacinia felis urna, quis euismod sapien sodales non.</li>
+                    </ul>
                   </div>
+                  <div class="cart-totals">
+                    <ul class="leaders">
+                      <li><span>Subtotal</span><span>$5432.45</span></li>
+                      <li><span>Service charge</span><span>$0</span></li>
+                      <li><span>Tax</span><span>$0</span></li>
+                      <li><span>Delivery</span><span>$0</span></li><br>
+                      <li><span>Total</span><span>$5432.45</span></li>
+                    </ul>
+                  </div>
+                  <button class="btn btn-success btn-block">Proceed to Checkout</button>
                 </div>
               </div>
             </div>
