@@ -286,6 +286,10 @@ button.onoffcanvas-toggler {
 .search-card .panel-body {
   background-color: #E1E9C1;
 }
+.search-card-disabled {
+  opacity: .5;
+  pointer-events: none;
+}
 ul.leaders {
   padding: 0;
   overflow-x: hidden;
