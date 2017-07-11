@@ -16,31 +16,43 @@ block main-content
   .row.addon-row.addon-row-attached
     .col-sm-12
       .page-header
-        span.remove-border-bottom
+        //- span.remove-border-bottom
           button.btn.btn-lg.btn-success.pull-right.hidden-md.hidden-lg(data-target="#onoffcanvas" data-toggle="onoffcanvas" aria-expanded="false")
             span.fa.fa-shopping-cart
             | &nbsp; Cart (3)
         h1 Real Property details
   .row.addon-row.addon-row-attached
-    .col-sm-12
+    .col-sm-12.col-md-8
       include searchInput
       .row
         .col-sm-6
-          button.btn.btn-success.btn-block Proceed to Checkout
+          button.btn.btn-primary.btn-block
+            | $17,450.00 due now - Add to
+            .fa.fa-shopping-cart
           br
         .col-sm-6
-          button.btn.btn-default.btn-block Add all charges due to cart
+          button.btn.btn-success.btn-block Proceed to Checkout
           br
       .row
-        .col-sm-12.col-md-8
+        .col-sm-12
           //- TODO: pass a varible to choose if it is collapse or not
-          - var parcelNum = '12345678';
+          - var parcelNum = Math.floor(Math.random()*90000) + 10000;
+          - var name = 'Starbucks';
+          - var pastDue = true;
+          - var dueNow = false;
           include panels
-          - var parcelNum = '87654321';
+          - var parcelNum = Math.floor(Math.random()*90000) + 10000;
+          - var name = 'Jim Smith Inc.';
+          - var pastDue = false;
+          - var dueNow = false;
           include panels
-
-        .col-md-4.visible-md-block.visible-lg-block
-          include cart
+          - var name = 'Buck Star';
+          - var parcelNum = Math.floor(Math.random()*90000) + 10000;
+          - var pastDue = false;
+          - var dueNow = true;
+          include panels
+    .col-md-4.visible-md-block.visible-lg-block
+      include cart
 block custom-js
   if production
     script(src="/js/custom.js")
