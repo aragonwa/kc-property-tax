@@ -9,9 +9,9 @@
             strong #{parcelNum}
             | &nbsp;&nbsp;
             if pastDue
-              button.btn.btn-xs.btn-danger(id='past-due-parcel-' + parcelNum) Past Due
+              span.label.label-danger(id='past-due-parcel-' + parcelNum) Past Due
             if dueNow
-              button.btn.btn-xs.btn-warning(id='due-now-parcel-' + parcelNum) Due now
+              span.label.label-warning(id='due-now-parcel-' + parcelNum) Due now
     div(id="parcelNum-"+parcelNum class=parcelNum + 'panel-collapse collapse' role="tabpanel" aria-lablledby="parcelAccount" + parcelNum)
       .panel-body
         .row
@@ -53,7 +53,7 @@
                     p If applicable, prior year(s) taxes are delinquent.
                     p Choose the amounts to pay now:
                     ul.leaders
-                      li.text-muted
+                      li.gray
                         span
                           | 2nd half of 2017
                           span.hidden-xs - Cannot be paid at this time
@@ -81,7 +81,7 @@
                         span $5000 &nbsp;
                           button.btn.btn-info#btn-remove
                             | Remove&nbsp;
-                            .fa.fa-ban.fa-color-danger
+                            .fa.fa-times-circle.fa-color-danger
                       li.description.visible-xs
                         em.text-danger Past due
                 .panel-heading(role="tab")

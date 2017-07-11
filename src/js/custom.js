@@ -20,8 +20,3 @@ $('body').click(function(e) {
 $(document).keyup(function(e) {
   if (e.keyCode === 27 && $onoffcanvas.hasClass('is-open')) $onoffcanvas.onoffcanvas('hide');  // esc
 });
-
-$("[id^='past-due-parcel-']").click(function(e){
-  e.stopPropagation();
-  e.preventDefault();
-});
