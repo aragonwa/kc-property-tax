@@ -206,16 +206,21 @@ button.onoffcanvas-toggler {
     padding-left: initial;
   }
 }
-.panel.panel-accordion-primary-dark .tab-pane {
+.panel.panel-accordion-primary-dark .panel-collapse {
   border-bottom: none;
   border-left: none;
   border-right: none;
 }
-.panel.panel-accordion-primary-dark .tab-pane ul.leaders li {
-  padding-bottom: 20px;
+.panel.panel-accordion-primary-dark .panel-collapse ul.leaders li {
+  padding-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .panel.panel-accordion-primary-dark .panel-collapse ul.leaders li {
+    padding-bottom: 20px;
+  }
 }
 .cart .cart-title {
-  border-bottom: 1px dotted #000000;
+  border-bottom: 2px solid #A5C727;
   border-top: 6px solid #A5C727;
   padding: 5px 0;
   margin-top: 5px;
@@ -332,4 +337,39 @@ ul.leaders .description:before {
   border-left: 6px solid #A5C727;
   background-color: #FFFFFF;
   padding: 15px 20px;
+}
+/*CSS to House */
+.onoffcanvas-tab {
+  position: absolute;
+  left: -80px;
+  width: 0px;
+  height: 0px;
+  border-top: 30px solid transparent;
+  border-right: 30px solid #A5C727;
+  border-bottom: 30px solid transparent;
+}
+.onoffcanvas-tab:after {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 60px;
+  background: #A5C727;
+  top: -30px;
+  left: 30px;
+}
+.onoffcanvas-tab span.onoffcanvas-counter {
+  font-size: 20px;
+  width: 57px;
+  padding-left: 25px;
+  position: absolute;
+  top: -12px;
+  z-index: 100;
+}
+.onoffcanvas-tab span.onoffcanvas-counter .fa {
+  display: inline;
+}
+@media (min-width: 992px) {
+  .onoffcanvas-tab {
+    display: none;
+  }
 }
