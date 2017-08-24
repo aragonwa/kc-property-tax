@@ -42,13 +42,12 @@ block main-content
           br
           | (206) 666-6666
     .col-sm-12
-        p
-          strong Transaction #
-            span#transaction-number 6567656
+        p.m-b-0.payment-engine-heading
+          | Transaction # 6567656
           br
-          | Completed: 05/18/2017, 2:00 p.m. (PST)
-        p
-          strong Billed to:
+        p Completed: 05/18/2017, 2:00 p.m. (PST)
+        p.m-b-0.m-b-0
+          | Billed to:
         p
           | ABC Company Inc.
           br
@@ -58,8 +57,8 @@ block main-content
         p#CC-number VISA # ****************4056
         br
         .receipt-cart
-          p.receipt-cart-header
-            strong Itemization
+          p.receipt-cart-header.payment-engine-heading
+            | Itemization
           .receipt-cart-items
             ul.leaders
                 li

@@ -1,0 +1,39 @@
+//Leaders
+ul.leaders {
+  padding: 0;
+  overflow-x: hidden;
+  list-style: none;
+  li {
+    font-size: 16px;
+    font-weight: 600;
+      &:before {
+          float: left;
+          width: 0;
+          white-space: nowrap;
+          color: #000000;
+          content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+      }
+  }
+  span:first-child {
+      padding-right: 0.33em;
+      background: #FFFFFF;
+  }
+  span+span {
+      float: right;
+      padding-left: 0.33em;
+      background: #FFFFFF;
+  }
+  .description {
+      font-size:14px;
+      font-weight: 600;
+      padding-bottom: 5px;
+      color: #747167;
+      &:before {
+          float: initial;
+          width: initial;
+          white-space: normal;
+          color: #DDDDDD;
+          content: "";
+      }
+  }
+}

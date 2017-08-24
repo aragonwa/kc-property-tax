@@ -36,11 +36,11 @@ block main-content
             .panel-body
               form
                 .form-group
-                  a(href="#")
-                    .fa.fa-question-circle.pull-right
-                  label(for="search-real-property-input") Parcel #/tax account #
+                  label(for="search-real-property-input")
+                    | Parcel #/tax account # &nbsp;
+                    a(href="#" data-container="body" data-toggle="popover" data-placement="top" data-content="Separate multiple entries with a comma.")
+                      .fa.fa-question-circle
                   input.form-control(type="text" id="search-real-property-input")
-                  p.help-block Seperate multiple entries with a comma
                 button.btn.btn-primary(type="submit" id="search-real-property-submit")
                     | Search
                     | &nbsp;
@@ -55,13 +55,13 @@ block main-content
             .panel-body
               form
                 .form-group
-                  a(href="#")
-                    .fa.fa-question-circle.pull-right
-                  label(for="search-personal-property-input") Personal property tax account #
+                  label(for="search-personal-property-input") 
+                    | Personal property tax account #
+                    a(href="#" data-container="body" data-toggle="popover" data-placement="top" data-content="Separate multiple entries with a comma.")
+                      .fa.fa-question-circle
                   .input-group
                     span.input-group-addon 4200-
                     input.form-control(type="text" id="search-personal-property-input")
-                  p.help-block Seperate multiple entries with a comma
                 button.btn.btn-primary(type="submit" id="search-personal-property-submit")
                   | Search
                   | &nbsp;

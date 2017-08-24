@@ -1,0 +1,106 @@
+.panel.panel-accordion-primary-dark {
+  @keyframes fadeIn {
+      to {
+          opacity: 1;
+      }
+  }
+  &.fade-in {
+      opacity: 0;
+      animation: fadeIn .5s ease-in 1 forwards;
+  }
+  @keyframes fadeIn {
+      to {
+          opacity: 1;
+      }
+  }
+  &.fade-in {
+      opacity: 0;
+      animation: fadeIn .5s ease-in 1 forwards;
+  }
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  border-bottom:none;
+  -webkit-box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
+  &>.panel-heading {
+      background-color: @theme;
+      padding-right: 0;
+      padding-left: 0;
+      border-radius: 0;
+      padding: 0;
+      a {
+          color: #FFFFFF;
+          padding: 10px 15px;
+          display: block;
+          &.collapsed {
+              display: block;
+              background: none; // border-bottom: 1px solid #DDD;
+              color: #FFFFFF;
+          }
+      }
+  }
+  h4.panel-title {
+      font-size:14px;
+      font-weight:300;
+      position: relative;
+      a {
+          border-bottom: none;
+      }
+      a p {
+          margin-bottom: 5px;
+      }
+      a p:first-child {
+        font-size:16px;
+        font-weight:600;
+        padding-bottom:6px;
+      }
+      a p:last-child {
+          margin-bottom: 0px;
+      }
+      .fa-plus {
+          padding-right: 15px;
+          position: absolute;
+          right: 0;
+      }
+      .fa-plus:before {
+          content: "\f068";
+      }
+      .collapsed .fa-plus:before {
+          content: "\f067";
+      }
+  }
+  @media (max-width:768px) {
+      .nav-tabs {
+          &>li.active::after {
+              content: ''
+          }
+          &>li {
+              float: none;
+          }
+          &>li+li {
+              padding-left: initial;
+          }
+      }
+  }
+  .panel-collapse {
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+      ul.leaders {
+          li {
+              &.description {
+                padding-bottom: 10px;
+              }
+              padding-bottom: 0px;
+              @media (min-width: 768px) {
+                  padding-bottom: 20px;
+                &.description {
+                  padding-bottom: 0px;
+                }
+              }
+          }
+      }
+  }
+}

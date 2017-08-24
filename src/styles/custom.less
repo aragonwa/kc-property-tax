@@ -1,118 +1,16 @@
 @import 'onoffcanvas.less';
+@import 'btnCustom.less';
+@import 'cart.less';
+@import 'leaders.less';
+@import 'panel-accordion.less';
+@import 'receipt-page.less';
+@import 'review-page.less';
+@import 'search-page.less';
 // Details
-.panel.panel-accordion-primary-dark {
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-        }
-    }
-    &.fade-in {
-        opacity: 0;
-        animation: fadeIn .5s ease-in 1 forwards;
-    }
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-        }
-    }
-    &.fade-in {
-        opacity: 0;
-        animation: fadeIn .5s ease-in 1 forwards;
-    }
-    border-top:none;
-    border-right:none;
-    border-left:none;
-    border-bottom:none;
-    -webkit-box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
-    box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.75);
-    &>.panel-heading {
-        background-color: #264c5d;
-        padding-right: 0;
-        padding-left: 0;
-        border-radius: 0;
-        padding: 0;
-        a {
-            color: #FFFFFF;
-            padding: 10px 15px;
-            display: block;
-            &.collapsed {
-                display: block;
-                background: none; // border-bottom: 1px solid #DDD;
-                color: #FFFFFF;
-            }
-        }
-    }
-    h4.panel-title {
-        font-weight: 400;
-        position: relative;
-        a p {
-            margin-bottom: 5px;
-        }
-        a p:last-child {
-            margin-bottom: 0px;
-        }
-        .fa-plus {
-            padding-right: 15px;
-            position: absolute;
-            right: 0;
-        }
-        .fa-plus:before {
-            content: "\f068";
-        }
-        .collapsed .fa-plus:before {
-            content: "\f067";
-        }
-    }
-    @media (max-width:768px) {
-        .nav-tabs {
-            &>li.active::after {
-                content: ''
-            }
-            &>li {
-                float: none;
-            }
-            &>li+li {
-                padding-left: initial;
-            }
-        }
-    }
-    .panel-collapse {
-        border-bottom: none;
-        border-left: none;
-        border-right: none;
-        ul.leaders {
-            li {
-                &.description {
-                  padding-bottom: 10px;
-                }
-                padding-bottom: 0px;
-                @media (min-width: 768px) {
-                    padding-bottom: 20px;
-                  &.description {
-                    padding-bottom: 0px;
-                  }
-                }
-            }
-        }
-    }
-}
+@greyDark: #4C4943;
+@theme: #264c5d;
+@paymentEngineGreen: #5D7D39;
 
-.cart {
-    .cart-title {
-        border-bottom: 2px solid #A5C727;
-        padding: 5px 0;
-        margin-top: 5px;
-    }
-    .cart-items {
-        padding-top: 20px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #A5C727;
-    }
-    .cart-totals {
-        padding: 15px 0;
-    }
-}
 
 .search-items {
     padding-top: 5px;
@@ -122,132 +20,10 @@
     }
 }
 
-// Receipt Page
-.receipt-header {
-    border-bottom: 1px dotted #000000;
-    margin-bottom: 10px;
-}
-
-.receipt-cart {
-    border-bottom: 6px solid #A5C727;
-    .receipt-cart-header {
-        border-bottom: 6px solid #A5C727;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .receipt-cart-items {
-        ul.leaders {
-            border-bottom: 2px solid #A5C727;
-            padding-bottom: 10px;
-        }
-    }
-}
-
-// Review Page
-.review-header {
-    border-bottom: 6px solid #A5C727;
-}
-
-.review-cart {
-    border-bottom: 6px solid #A5C727;
-    .review-cart-items {
-        padding-top: 20px;
-        border-bottom: 2px solid #A5C727;
-        padding-bottom: 10px;
-    }
-}
-
-.review-cart-total {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    @media (max-width: 768px) {
-        #review-cart-total-update-btn {
-            margin-bottom: 10px;
-        }
-    }
-}
-
-//Search Page
-.search-notice {
-    .panel-body {
-        background-color: #e1e9c1;
-    }
-}
-
-.search-card {
-    .panel-heading {
-        .fa {
-            color: #FFFFFF;
-        }
-    }
-    .search-card-image {
-        width: 100%;
-    }
-    .panel-body {
-        background-color: #E1E9C1;
-    }
-}
-
-.search-card-disabled {
-  opacity: .5;
-  pointer-events: none;
-}
 
 // Shared
-//Leaders
-ul.leaders {
-    padding: 0;
-    overflow-x: hidden;
-    list-style: none;
-    li {
-        font-weight: 700;
-        &:before {
-            float: left;
-            width: 0;
-            white-space: nowrap;
-            color: #000000;
-            content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
-        }
-    }
-    span:first-child {
-        padding-right: 0.33em;
-        background: #FFFFFF;
-    }
-    span+span {
-        float: right;
-        padding-left: 0.33em;
-        background: #FFFFFF;
-    }
-    .description {
-        font-weight: 400;
-        padding-bottom: 5px;
-        color: #747167;
-        &:before {
-            float: initial;
-            width: initial;
-            white-space: normal;
-            color: #DDDDDD;
-            content: "";
-        }
-    }
-}
 
-// Off canvas panel
-#onoffcanvas {
-    width: 100%;
-    @media (min-width: 768px) {
-        width:50%;
-    }
-}
 
-#offcanvas-cart {
-    -webkit-box-shadow: 3px 6px 10px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 6px 10px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 6px 10px -1px rgba(0, 0, 0, 0.75);
-    border-left: 6px solid #A5C727;
-    background-color: #FFFFFF;
-    padding: 15px 20px;
-}
 
 
 /*CSS to House */
@@ -284,3 +60,11 @@ ul.leaders {
         display: none;
     }
 }
+
+.payment-engine-heading {
+    color: @greyDark;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  
+  

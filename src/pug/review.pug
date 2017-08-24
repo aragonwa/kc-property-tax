@@ -23,10 +23,9 @@ block main-content
   .row.addon-row.addon-row-attached
     .col-sm-12
       .review-header
-        p
-          strong
-            .fa.fa-shopping-cart &nbsp;
-            | Confirm cart details
+        p.payment-engine-heading
+          span.fa.fa-shopping-cart &nbsp;
+          | Confirm cart details
     .col-sm-12
       .review-cart
         .review-cart-items
@@ -78,54 +77,11 @@ block main-content
                 li
                   span Total
                   span $5432.45
-  //- .row.addon-row.addon-row-attached
-  //-   .col-sm-6
-  //-     p
-  //-       strong Confirm billing address
-  //-     .media
-  //-       .media-left
-  //-         label
-  //-           input(type='checkbox' checked)
-  //-       .media-body
-  //-         p Use this address for billing
-  //-         p
-  //-           | ABC Inc.
-  //-           br
-  //-           | First St.
-  //-           br
-  //-           | Seattle, WA 91919
-  //-     .media
-  //-       .media-left
-  //-         label
-  //-           input(type='checkbox')
-  //-       .media-body
-  //-         p Enter new address
-  //-   .col-sm-6
-  //-     p
-  //-       strong Confirm shipping/receipt address
-  //-     .media
-  //-       .media-left
-  //-         label
-  //-           input(type='checkbox' checked)
-  //-       .media-body
-  //-         p Use this address for billing
-  //-         p
-  //-           | ABC Inc.
-  //-           br
-  //-           | First St.
-  //-           br
-  //-           | Seattle, WA 91919
-  //-     .media
-  //-       .media-left
-  //-         label
-  //-           input(type='checkbox')
-  //-       .media-body
-  //-         p Enter new address
   .row.addon-row.addon-row-attached
     .col-sm-12
-      p * You will be charged a service charge based on your payment type.
+      p(style="padding-top:8px; padding-bottom: 45px;") * You will be charged a service charge based on your payment type.
     .col-sm-12
-      button.btn.btn-success Proceed to billing
+      button.btn.btn-payment-engine Proceed to billing
 block custom-js
   if production
     script(src="/js/custom.js")

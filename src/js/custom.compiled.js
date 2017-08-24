@@ -136,3 +136,6 @@ $('body').click(function(e) {
 $(document).keyup(function(e) {
   if (e.keyCode === 27 && $onoffcanvas.hasClass('is-open')) $onoffcanvas.onoffcanvas('hide');  // esc
 });
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
