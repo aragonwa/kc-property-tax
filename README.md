@@ -9,6 +9,8 @@
 [Search page](http://kc-property-tax.surge.sh/search)
 
 # Updates 
+* 8/21
+  * Updating styling per Beth 8/21
 * 7/11
   * Changed offcanvas menu tab per design
   * Adding 'past due' and 'due now' buttons/text
