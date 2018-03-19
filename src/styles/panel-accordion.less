@@ -45,9 +45,9 @@
       font-size:14px;
       font-weight:300;
       position: relative;
-      a {
-          border-bottom: none;
-      }
+      // a {
+      //     border-bottom: none;
+      // }
       a p {
           margin-bottom: 5px;
       }
@@ -84,6 +84,12 @@
           }
       }
   }
+  .collapse{
+    @media print {
+      height: initial !important;
+      display: block;
+    }
+  }
   .panel-collapse {
       border-bottom: none;
       border-left: none;
@@ -102,5 +108,6 @@
               }
           }
       }
+
   }
 }

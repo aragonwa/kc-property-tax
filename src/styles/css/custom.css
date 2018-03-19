@@ -265,6 +265,11 @@ ul.leaders li:before {
   color: #000000;
   content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
 }
+@media print {
+  ul.leaders li:before {
+    content: "";
+  }
+}
 ul.leaders span:first-child {
   padding-right: 0.33em;
   background: #FFFFFF;
@@ -336,9 +341,6 @@ ul.leaders .description:before {
   font-weight: 300;
   position: relative;
 }
-.panel.panel-accordion-primary-dark h4.panel-title a {
-  border-bottom: none;
-}
 .panel.panel-accordion-primary-dark h4.panel-title a p {
   margin-bottom: 5px;
 }
@@ -370,6 +372,12 @@ ul.leaders .description:before {
   }
   .panel.panel-accordion-primary-dark .nav-tabs > li + li {
     padding-left: initial;
+  }
+}
+@media print {
+  .panel.panel-accordion-primary-dark .collapse {
+    height: initial !important;
+    display: block;
   }
 }
 .panel.panel-accordion-primary-dark .panel-collapse {
